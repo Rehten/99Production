@@ -1,13 +1,14 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './src/index.ts',
-        print: './src/print.tsx'
+        app: './src/index.ts'
     },
     output: {
         filename: '[name].[hash].bundle.js',
@@ -30,14 +31,20 @@ module.exports = {
             {
                 enforce: "pre", test: /\.js$/,
                 loader: "source-map-loader"
-            }
+            },
+            {
+                exclude: /node_modules/,
+                test: /\.scss$/,
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
+            },
         ]
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'Argent Project',
-            template: 'src/index.html'
+            template: 'src/index.html',
+            inlineSource: '.(js|css)$'
         }),
         new ForkTsCheckerWebpackPlugin({
             async: false,
@@ -45,10 +52,11 @@ module.exports = {
             tsconfig: './tsconfig.json',
             tslint: './tslint.json',
         }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'libraries'
-        }),
+        new CopyWebpackPlugin([
+            {from:'src/assets/',to:'assets'}
+        ]),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackInlineSourcePlugin()
     ]
 };
