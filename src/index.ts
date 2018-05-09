@@ -1,8 +1,7 @@
 import './scss/bootstrap.scss'
 import * as $ from 'jquery'
-import 'bootstrap/dist/js/bootstrap.min'
-import 'bootstrap/dist/js/bootstrap.bundle.min'
+import './ts/dropdowns'
 
-$(document).on('ready', () => {
-  console.log('App works!');
+$(document).ready(() => {
+  console.log('document is ready')
 });

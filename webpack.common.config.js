@@ -8,17 +8,19 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: './src/index.ts'
+        app: './index.ts'
     },
     output: {
         filename: '[name].[hash].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
     },
+    context: path.resolve(__dirname, 'src'),
     module: {
         rules: [
             {
                 test: /\.ts?$/,
+                include: /src/,
                 use: [
                     {
                         loader: 'awesome-typescript-loader',
@@ -43,20 +45,23 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'Argent Project',
-            template: 'src/index.html',
+            template: 'index.html',
             inlineSource: '.(js|css)$'
         }),
         new ForkTsCheckerWebpackPlugin({
             async: false,
             watch: 'src',
-            tsconfig: './tsconfig.json',
-            tslint: './tslint.json',
+            tsconfig: './../tsconfig.json',
+            tslint: './../tslint.json',
         }),
         new CopyWebpackPlugin([
-            {from:'src/assets/',to:'assets'}
+            {from:'./assets/',to:'assets'}
         ]),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackInlineSourcePlugin()
-    ]
+    ],
+    resolve: {
+        extensions: ['.ts', '.js', '.json']
+    }
 };

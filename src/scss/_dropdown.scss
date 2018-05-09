@@ -1,3 +1,4 @@
+@import "variables";
 // The dropdown wrapper (`<div>`)
 .dropup,
 .dropdown {
@@ -15,13 +16,16 @@
   top: 100%;
   left: 0;
   z-index: $zindex-dropdown;
-  display: none; // none by default, but block on "open" of the menu
+  display: block; // none by default, but block on "open" of the menu
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
   float: left;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
   margin: $dropdown-spacer 0 0; // override default ul
   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
-  color: $body-color;
+  color: $white;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: $dropdown-bg;
@@ -29,6 +33,7 @@
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
   @include box-shadow($dropdown-box-shadow);
+  transition: opacity 0.15s ease-in-out 0.075s, max-height 0.15s ease-in-out 0.075s;
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
@@ -117,7 +122,8 @@
 }
 
 .dropdown-menu.show {
-  display: block;
+  opacity: 1;
+  max-height: 10rem;
 }
 
 // Dropdown section headers
