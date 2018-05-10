@@ -233,7 +233,7 @@ $font-family-base:            $font-family-sans-serif !default;
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
-$font-size-sm:                ($font-size-base * .875) !default;
+$font-size-sm:                ($font-size-base * .9) !default;
 
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
@@ -529,7 +529,7 @@ $form-feedback-invalid-color:       theme-color("danger") !default;
 //
 // Dropdown menu container and contents.
 
-$dropdown-min-width:                10rem !default;
+$dropdown-min-width:                2rem !default;
 $dropdown-padding-y:                .5rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-bg:                       rgba($black, .8) !default;

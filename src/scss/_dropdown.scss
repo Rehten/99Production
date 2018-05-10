@@ -22,7 +22,7 @@
   overflow-y: hidden;
   float: left;
   min-width: $dropdown-min-width;
-  padding: $dropdown-padding-y 0;
+  padding: 0 0;
   margin: $dropdown-spacer 0 0; // override default ul
   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
   color: $white;

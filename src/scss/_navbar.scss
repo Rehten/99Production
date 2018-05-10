@@ -219,6 +219,7 @@
   .navbar-nav {
     .nav-link {
       color: $navbar-light-color;
+      font-size: 1.5*$font-size-base;
 
       @include hover-focus {
         color: $navbar-light-hover-color;
@@ -262,6 +263,7 @@
 .navbar-dark {
   .navbar-brand {
     color: $navbar-dark-active-color;
+    font-size: 1.5*$font-size-base;
 
     @include hover-focus {
       color: $navbar-dark-active-color;

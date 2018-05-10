@@ -1,0 +1,18 @@
+.landing-block {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.background-wrapper {
+  width: 100%;
+}
+
+.background-99production {
+  background: url("./../../assets/images/99background-open.jpg");
+  max-height: 42rem;
+  min-height: 42rem;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}

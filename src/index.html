@@ -6,38 +6,82 @@
 </head>
 <body>
 <div class="container-fluid px-0">
-    <div class="header bg-light">
-        <div class="col-xl-12 col-lg-12">
-            <nav class="navbar navbar-expand-lg navbar-light mx-xl-5 mx-lg-3 mx-md-0">
-                <a class="navbar-brand pt-0 pb-lg-2 pb-md-1 d-flex align-items-center col-2" href="#">
-                    <img width="200" src="./assets/images/99-LOGO.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <div class="landing-block d-flex flex-column justify-around">
+        <div class="header bg-transparent">
+            <div class="col-xl-12 col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light mx-xl-5 mx-lg-3 mx-md-0">
+                    <a class="navbar-brand pt-0 pb-lg-2 pb-md-1 d-flex align-items-center col-2" href="#">
+                        <img class="header-logo" src="./assets/images/99-LOGO.png" alt="">
+                    </a>
+                    <div class="pt-4 pr-4">
+                        <button class="navbar-toggler header-button-hamburger" type="button" data-toggle="collapse" data-target="#StickerNavBar"
+                                 aria-controls="StickerNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
 
-                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                            <div class="dropdown-menu rounded-0 border border-light" aria-labelledby="dropdown01">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+
+                    <div class="collapse navbar-collapse"  id="StickerNavBar">
+                        <ul class="navbar-nav ml-5">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Услуги</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Команда</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Клиенты</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Блог</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Контакты</a>
+                            </li>
+
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">
+                                    <img width="30" src="./assets/svg/youtube.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">
+                                    <img width="30" src="./assets/svg/instagram.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">
+                                    <img width="30" src="./assets/svg/facebook.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item active border-left border-dark">
+                                <a class="nav-link" href="#">
+                                    <img width="30" src="./assets/svg/vk.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">UA</a>
+                                <div class="dropdown-menu rounded-0 border border-light" aria-labelledby="dropdown01">
+                                    <a class="dropdown-item" href="#">UA</a>
+                                    <a class="dropdown-item" href="#">EN</a>
+                                    <a class="dropdown-item" href="#">RUS</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="background-wrapper">
+            <div class="background-99production"></div>
+        </div>
+        <div class="col-10 mx-auto">
+            <h1 class="text-center text-uppercase display-4 font-weight-bold">Рекламное агентство полного цикла</h1>
         </div>
     </div>
 </div>
