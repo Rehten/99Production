@@ -1,4 +1,15 @@
-.header-logo {
-  min-height: 6*$navbar-brand-font-size;
-  max-height: 6*$navbar-brand-font-size;
+@media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+  .header-logo {
+    min-height: 4*$navbar-brand-font-size;
+    max-height: 4*$navbar-brand-font-size;
+  }
+}
+
+
+@media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+
+  .header-logo {
+    min-height: 8*$navbar-brand-font-size;
+    max-height: 8*$navbar-brand-font-size;
+  }
 }

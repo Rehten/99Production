@@ -9,7 +9,6 @@
 // Navbar position
 // Navbar themes
 
-
 // Navbar
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
@@ -34,7 +33,6 @@
   }
 }
 
-
 // Navbar brand
 //
 // Used for brand, project, or site names.
@@ -52,7 +50,6 @@
     text-decoration: none;
   }
 }
-
 
 // Navbar nav
 //
@@ -76,7 +73,6 @@
   }
 }
 
-
 // Navbar text
 //
 //
@@ -86,7 +82,6 @@
   padding-top: $nav-link-padding-y;
   padding-bottom: $nav-link-padding-y;
 }
-
 
 // Responsive navbar
 //
@@ -180,7 +175,7 @@
         }
 
         .navbar-collapse {
-          display: flex !important;  // stylelint-disable-line declaration-no-important
+          display: flex !important; // stylelint-disable-line declaration-no-important
 
           // Changes flex-bases to auto because of an IE10 bug
           flex-basis: auto;
@@ -201,7 +196,6 @@
   }
 }
 
-
 // Navbar themes
 //
 // Styles for switching between navbars with light or dark background.
@@ -219,7 +213,22 @@
   .navbar-nav {
     .nav-link {
       color: $navbar-light-color;
-      font-size: 1.5*$font-size-base;
+      font-size: $font-size-base;
+
+      & img {
+        width: 2 * $font-size-base;
+        min-height: 2 * $font-size-base;
+        @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+          width: 4 * $font-size-base;
+          min-height: 4 * $font-size-base;
+        }
+      }
+
+      @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+        font-size: 3 * $font-size-base;
+        margin: 2 * $font-size-base auto;
+        text-align: center;
+      }
 
       @include hover-focus {
         color: $navbar-light-hover-color;

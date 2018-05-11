@@ -1,0 +1,19 @@
+@media screen and(max-width: map-get($grid-breakpoints, "lg")) {
+  .lg-show {
+    display: none;
+  }
+
+  .md-show {
+    display: flex;
+  }
+}
+
+@media screen and(min-width: map-get($grid-breakpoints, "lg")) {
+  .lg-show {
+    display: flex;
+  }
+
+  .md-show {
+    display: none;
+  }
+}

@@ -1,18 +1,45 @@
 .landing-block {
-  min-height: 100vh;
-  max-height: 100vh;
+
+  @media screen and(min-width: map-get($grid-breakpoints, "xl")) {
+    min-height: 99vh;
+    max-height: 99vh;
+    padding-bottom: 1vh;
+  }
+
+  @media screen and(max-width: map-get($grid-breakpoints, "xl")) {
+    min-height: 95vh;
+    max-height: 95vh;
+    padding-bottom: 5vh;
+  }
+
+  @media screen and(max-width: map-get($grid-breakpoints, "lg")) {
+    min-height: 95vh;
+    max-height: 95vh;
+    padding-bottom: 5vh;
+  }
+
   overflow: hidden;
 }
 
+$image-height: 25vw;
 .background-wrapper {
   width: 100%;
+  overflow-y: visible;
+  max-height: $image-height* 1.4;
 }
 
 .background-99production {
   background: url("./../../assets/images/99background-open.jpg");
-  max-height: 42rem;
-  min-height: 42rem;
-  background-size: cover;
-  background-position: center center;
+  min-height: $image-height * 2.2;
+  max-height: $image-height * 2.2;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
   overflow: hidden;
+}
+
+.header {
+  max-height: 8rem ;
+  overflow: visible;
+  z-index: 1000;
 }

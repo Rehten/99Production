@@ -22,6 +22,12 @@
   }
 }
 
+@each $width, $value in $border-widths {
+  .border-#{$width} {
+    border-width: $value !important;
+  }
+}
+
 .border-white {
   border-color: $white !important;
 }
