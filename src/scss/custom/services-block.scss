@@ -1,0 +1,88 @@
+.services-backgrounds {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  filter: brightness(25%);
+  & .service-image {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.25s;
+
+    &.show {
+      opacity: 1;
+    }
+
+    & img {
+      min-width: 100%;
+    }
+  }
+}
+
+.service-rails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100vh;
+
+  &>.service-rail {
+    border-left: 1px solid $light;
+  }
+}
+
+.service-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.service-item {
+  $animation-time: 0.1s;
+  $delay-time: 0.05s;
+  padding: 5 * $kbd-padding-y;
+  border: 1.5px solid $light;
+  color: $light;
+  cursor: pointer;
+  z-index: 1;
+  transition: border-bottom-color $animation-time ease-in-out $delay-time,
+  border-right-color $animation-time ease-in-out $delay-time,
+  border-left-color $animation-time ease-in-out $delay-time,
+  border-top-color $animation-time ease-in-out $delay-time,
+  color $animation-time ease-in-out $delay-time;
+
+  &:hover, &.active {
+    border: 1.5px solid $danger;
+    color: $danger;
+    z-index: 2;
+  }
+}
+
+.service-texts {
+  $block-height: 60vh;
+
+  min-height: $block-height;
+  max-height: $block-height;
+  & .service-text {
+    position: absolute;
+    min-height: $block-height;
+    max-height: $block-height;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.25s;
+
+    &.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+

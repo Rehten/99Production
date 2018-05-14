@@ -25,13 +25,19 @@ $image-height: 25vw;
 .background-wrapper {
   width: 100%;
   overflow-y: visible;
-  max-height: $image-height* 1.4;
+  @media screen and(max-width: map-get($grid-breakpoints, "xl")) {
+    max-height: $image-height* 1.4;
+  }
+
+  @media screen and(min-width: map-get($grid-breakpoints, "xl")) {
+    max-height: $image-height* 0.9;
+  }
 }
 
 .background-99production {
   background: url("./../../assets/images/99background-open.jpg");
-  min-height: $image-height * 2.2;
-  max-height: $image-height * 2.2;
+    min-height: $image-height * 2.2;
+    max-height: $image-height * 2.2;
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
