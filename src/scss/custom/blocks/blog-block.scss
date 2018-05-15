@@ -1,0 +1,56 @@
+.blog-block {
+  overflow: hidden;
+}
+
+@for $i from 1 through 5 {
+  .blog-part-#{$i} {
+    min-height: $i*5rem;
+    max-height: $i*5rem;
+    overflow: hidden;
+    padding: $i * 0.025rem;
+    display: flex;
+    position: relative;
+
+    &>img {
+      width: 100%;
+    }
+
+    .blog-arrow {
+      position: absolute;
+      width: 100%;
+      min-height: $i*5rem;
+      max-height: $i*5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-end;
+      pointer-events: none;
+      & img {
+        width: 3rem;
+        min-height: 3rem;
+        max-height: 3rem;
+        padding: 0.5rem;
+      }
+    }
+
+    .block-area {
+      position: absolute;
+      width: 100%;
+      min-height: $i*5rem;
+      max-height: $i*5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out 0.1s;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.3);
+      }
+      .part-text {
+        text-align: center;
+      }
+    }
+  }
+}
