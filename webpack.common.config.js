@@ -40,6 +40,11 @@ module.exports = {
                 loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
             },
             {
+                exclude: /node_modules/,
+                test: /\.css$/,
+                loaders: ['style-loader', 'css-loader', 'resolve-url-loader']
+            },
+            {
                 test: /\.(png|jpg|gif)$/,
                 use: [
                     {
@@ -71,7 +76,12 @@ module.exports = {
         ]),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new HtmlWebpackInlineSourcePlugin()
+        new HtmlWebpackInlineSourcePlugin(),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        })
     ],
     resolve: {
         extensions: ['.ts', '.js', '.json']
