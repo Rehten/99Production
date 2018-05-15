@@ -1,0 +1,20 @@
+.teachers-photo {
+  max-height: 20vw;
+}
+
+@media screen and (max-width: 991px) {
+  .teachers-photo {
+    max-height: 35vw;
+  }
+}
+
+.teacher-info {
+  transition: opacity 0.5s ease-in-out 0.1s;
+}
+
+.teacher-info.hidden-block {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+}

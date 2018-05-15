@@ -1,8 +1,15 @@
+.services-block {
+  min-height: 100vh;
+}
+
+.services-column {}
+
 .services-backgrounds {
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
   filter: brightness(25%);
+  background: $dark;
   & .service-image {
     position: absolute;
     width: 100%;

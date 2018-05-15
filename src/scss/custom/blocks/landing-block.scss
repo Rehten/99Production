@@ -1,20 +1,20 @@
 .landing-block {
 
   @media screen and(min-width: map-get($grid-breakpoints, "xl")) {
-    min-height: 99vh;
-    max-height: 99vh;
+    min-height: 100vh;
+    max-height: 100vh;
     padding-bottom: 1vh;
   }
 
   @media screen and(max-width: map-get($grid-breakpoints, "xl")) {
-    min-height: 95vh;
-    max-height: 95vh;
+    min-height: 100vh;
+    max-height: 100vh;
     padding-bottom: 5vh;
   }
 
   @media screen and(max-width: map-get($grid-breakpoints, "lg")) {
-    min-height: 95vh;
-    max-height: 95vh;
+    min-height: 100vh;
+    max-height: 100vh;
     padding-bottom: 5vh;
   }
 
@@ -35,7 +35,7 @@ $image-height: 25vw;
 }
 
 .background-99production {
-  background: url("./../../assets/images/99background-open.jpg");
+  background: url("../../../assets/images/landing/99background-open.jpg");
     min-height: $image-height * 2.2;
     max-height: $image-height * 2.2;
   background-size: contain;

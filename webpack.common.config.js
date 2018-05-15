@@ -37,7 +37,7 @@ module.exports = {
             {
                 exclude: /node_modules/,
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
             },
             {
                 test: /\.(png|jpg|gif)$/,
