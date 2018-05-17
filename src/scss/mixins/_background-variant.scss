@@ -2,14 +2,14 @@
 
 // Contextual backgrounds
 
-@mixin bg-variant($parent, $color) {
+@mixin bg-variant($parent, $color, $opacity: 1) {
   #{$parent} {
-    background-color: $color !important;
+    background-color: rgba($color, $opacity) !important;
   }
   a#{$parent},
   button#{$parent} {
     @include hover-focus {
-      background-color: darken($color, 10%) !important;
+      background-color: rgba(darken($color, 10%), $opacity) !important;
     }
   }
 }

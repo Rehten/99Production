@@ -48,6 +48,14 @@
   @return $string;
 }
 
+@function button-hover-color($color) {
+  @if $color != map-get($theme-colors, "danger") {
+    @return map-get($theme-colors, "danger");
+  }
+
+  @return map-get($theme-colors, "light");
+}
+
 // Color contrast
 @function color-yiq($color) {
   $r: red($color);

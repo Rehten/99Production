@@ -226,8 +226,9 @@
 
       @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
         font-size: 3 * $font-size-base;
-        margin: 2 * $font-size-base auto;
-        text-align: center;
+        margin: 0.4 * $font-size-base auto;
+        text-align: left;
+        padding-left: $font-size-base
       }
 
       @include hover-focus {

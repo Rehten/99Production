@@ -26,6 +26,18 @@
                     </div>
 
                     <div class="collapse navbar-collapse" id="StickerNavBar">
+                        <ul class="navbar-nav md-show
+                            d-flex flex-column justify-content-start ">
+                            <li class="nav-item activetext-uppercase">
+                                <a class="nav-link my-0 py-0 text-black pr-3 small text-right" href="#">ua</a>
+                            </li>
+                            <li class="nav-item activetext-uppercase">
+                                <a class="nav-link my-0 py-0 text-black pr-3 small text-right" href="#">rus</a>
+                            </li>
+                            <li class="nav-item activetext-uppercase">
+                                <a class="nav-link my-0 py-0 text-black pr-3 small text-right" href="#">en</a>
+                            </li>
+                        </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Услуги</a>
@@ -44,28 +56,33 @@
                             </li>
 
                         </ul>
-                        <ul class="navbar-nav ml-auto  lg-show">
-                            <li class="nav-item active">
+                        <ul class="navbar-nav ml-auto d-flex flex-md-row justify-content-lg-around justify-content-md-start">
+                            <li class="nav-item active px-md-3 px-lg-0">
                                 <a class="nav-link" href="#">
                                     <img width="30" src="./assets/svg/youtube.svg" alt="">
                                 </a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item active px-md-3 px-lg-0">
                                 <a class="nav-link" href="#">
                                     <img width="30" src="./assets/svg/instagram.svg" alt="">
                                 </a>
                             </li>
-                            <li class="nav-item active pr-2">
+                            <li class="nav-item active pr-lg-2 pl-lg-0 px-md-3">
                                 <a class="nav-link" href="#">
                                     <img width="30" src="./assets/svg/facebook.svg" alt="">
                                 </a>
                             </li>
-                            <li class="nav-item active border-left border-dark pl-2">
+                            <li class="nav-item active border-lg-left border-dark pl-lg-2 pr-lg-0 lg-show">
                                 <a class="nav-link" href="#">
                                     <img width="30" src="./assets/svg/vk.svg" alt="">
                                 </a>
                             </li>
-                            <li class="nav-item dropdown active">
+                            <li class="nav-item active px-md-3 md-show">
+                                <a class="nav-link" href="#">
+                                    <img width="30" src="./assets/svg/vk.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown active lg-show">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                                    aria-haspopup="true" aria-expanded="false">UA</a>
                                 <div class="dropdown-menu rounded-0 border border-light" aria-labelledby="dropdown01">
@@ -90,9 +107,11 @@
                 <h4 class="text-center text-uppercase display-10 font-weight-bold">полного цикла</h4>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-4 mx-auto pt-lg-3 pt-xl-1 mt-md-5 my-md-0 mt-lg-0 h4">
-                <a class="btn btn-light border border-black border-2 btn-block rounded-0 btn-lg p-lg-3 p-md-4 text-uppercase my-3">
-                    <span class="h2">Скачать презентацию</span>
-                </a>
+                <h2>
+                    <a class="btn btn-outline-dark border-2 btn-block rounded-0 btn-lg h2 p-lg-3 p-md-4 text-uppercase my-3">
+                    Скачать презентацию
+                    </a>
+                </h2>
             </div>
         </div>
     </div>
@@ -114,9 +133,10 @@
                 <img src="assets/images/service/services-1.jpg" alt="">
             </div>
         </div>
-        <div class="mx-0 row px-0">
-            <div class="col-8">
-                <div class="col-6 offset-6 mt-5">
+        <div class="services-content mx-0 d-flex flex-lg-row
+         flex-md-column justify-content-lg-start justify-content-md-between px-0">
+            <div class="col-lg-8 col-md-12">
+                <div class="col-lg-6 offset-lg-6 col-md-12 offset-md-0 mt-5">
                     <h1 class="text-light text-center text-uppercase text-underline">Услуги</h1>
                 </div>
                 <div class="service-texts col-8 mx-auto">
@@ -136,11 +156,12 @@
                         <h6 class="text-light">---Some Bloggers---</h6>
                     </div>
                 </div>
-                <div class="col-6 offset-6 mt-4">
-                    <a class="btn btn-lg border border-light text-uppercase btn-block text-light rounded-0">Подробнее</a>
+                <div class="col-lg-6 offset-lg-6 col-md-6 offset-md-3 mt-4 lg-show ">
+                    <button class="btn btn-lg btn-outline-light text-uppercase
+                     btn-block rounded-0">Подробнее</button>
                 </div>
             </div>
-            <div class="col-3 position-relative">
+            <div class="col-3 position-relative lg-show">
                 <div class="col-12 pl-5 position-absolute">
                     <div class="service-rails">
                         <div class="service-rail bg-light"></div>
@@ -167,6 +188,43 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="col-lg-0 col-md-12 md-show pb-5 flex-column">
+                <div class="col-12 px-0 mx-auto position-relative">
+                    <div class="position-absolute col-12 px-0">
+                        <div id="ServicesDropDown" class="border border-danger bg-black-transparent toggle-target-menu">
+                            <div>
+                                <div class="service-item border-0" data-target="Radio">
+                                    <p class="mb-0 text-left pl-2 text-uppercase">Реклама на радио</p>
+                                </div>
+                                <div class="service-item border-0" data-target="Video">
+                                    <p class="mb-0 text-left pl-2 text-uppercase">Видеосъемка</p>
+                                </div>
+                                <div class="service-item border-0" data-target="Outer">
+                                    <p class="mb-0 text-left pl-2 text-uppercase">Наружная реклама</p>
+                                </div>
+                                <div class="service-item border-0" data-target="Metro">
+                                    <p class="mb-0 text-left pl-2 text-uppercase">Реклама в метро</p>
+                                </div>
+                                <div class="service-item border-0" data-target="Bloggers">
+                                    <p class="mb-0 text-left pl-2 text-uppercase">Реклама у блогеров</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-target="#ServicesDropDown" class="toggle-menu col-12 bg-black-transparent mx-auto px-4 py-3
+                    d-flex flex-row justify-content-between align-items-center">
+                    <span class="text-uppercase mb-0">Услуги</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                         id="Layer_1" x="0px" y="0px" width="1.5rem" height="1.5rem" viewBox="0 0 306 306"
+                         style="enable-background:new 0 0 407.436 407.436;" xml:space="preserve"
+                    >
+                        <polygon
+                                points="35.7,247.35 153,130.05 270.3,247.35 306,211.65 153,58.65 0,211.65 		"
+                                fill="white"></polygon>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -341,23 +399,25 @@
             <h1 class="text-black text-center text-uppercase text-underline">Контакты</h1>
         </div>
         <div class="col-xl-11 mx-auto col-lg-11 col-md-12 px-xl-3 px-lg-1 px-md-3 text-center">
-            <div class="col-xl-4 col-lg-5 col-md-6 position-absolute dark-transparent-background border border-light box-shadow text-light p-2 m-3">
-                <div class="col-12 text-left">
-                    <h6>Адрес</h6>
-                    <h6 class="small">Киев, метро "Почтовая площадь", ул. Братская 6/13 оф. 103</h6>
-                </div>
-                <div class="col-12 text-left">
-                    <h6>Телефон</h6>
-                    <h6 class="small"><a class="text-light" href="tel:+38 (044) 237-37-07">+38 (044) 237-37-07</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                        <a class="text-light" href="tel:+38 (063) 237-37-07">+38 (063) 237-37-07</a></h6>
-                </div>
-                <div class="col-12 text-left">
-                    <h6>Skype</h6>
-                    <h6 class="small">vadim.it-centre.net</h6>
-                </div>
-                <div class="col-12 text-left">
-                    <h6>Email</h6>
-                    <h6 class="small">Support@it-centre.net</h6>
+            <div class="position-relative">
+                <div class="col-xl-4 col-lg-5 col-md-6 position-absolute dark-transparent-background border border-light box-shadow text-light p-2 m-3">
+                    <div class="col-12 text-left">
+                        <h6>Адрес</h6>
+                        <h6 class="small">Киев, метро "Почтовая площадь", ул. Братская 6/13 оф. 103</h6>
+                    </div>
+                    <div class="col-12 text-left">
+                        <h6>Телефон</h6>
+                        <h6 class="small"><a class="text-light" href="tel:+38 (044) 237-37-07">+38 (044) 237-37-07</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            <a class="text-light" href="tel:+38 (063) 237-37-07">+38 (063) 237-37-07</a></h6>
+                    </div>
+                    <div class="col-12 text-left">
+                        <h6>Skype</h6>
+                        <h6 class="small">vadim.it-centre.net</h6>
+                    </div>
+                    <div class="col-12 text-left">
+                        <h6>Email</h6>
+                        <h6 class="small">Support@it-centre.net</h6>
+                    </div>
                 </div>
             </div>
             <iframe class="contacts-center contacts-map"

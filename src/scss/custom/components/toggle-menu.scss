@@ -1,0 +1,50 @@
+.toggle-menu {
+  @media screen and (max-width: 992px) and (orientation: portrait) {
+    &>span {
+      font-size: 3rem;
+    }
+  }
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    &>span {
+      font-size: 2rem;
+    }
+  }
+  color: $light !important;
+  border: 1.5px solid $light !important;
+  cursor: pointer;
+  &>svg>polygon {
+    fill: $light !important;
+    transition: fill 0.1s ease-in-out 0.05s;
+  }
+  transition: all 0.1s ease-in-out 0.05s;
+
+  &:hover, &:focus, &:active, &.active {
+    color: $danger !important;
+    border: 1.5px solid $danger !important;
+    &>svg>polygon {
+      fill: $danger !important;
+    }
+  }
+}
+
+.toggle-target-menu {
+  @media screen and (max-width: 992px) and (orientation: portrait) {
+    & p {
+      font-size: 3rem;
+    }
+  }
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    & p {
+      font-size: 2rem;
+    }
+  }
+  transform: translateY(-99%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-in-out 0.075s;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
