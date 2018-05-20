@@ -1,0 +1,10 @@
+@media screen and (max-width: 992px) and (orientation: portrait) {
+  html {
+    font-size: 1.35rem;
+  }
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  html {
+    font-size: 0.85rem;
+  }
+}

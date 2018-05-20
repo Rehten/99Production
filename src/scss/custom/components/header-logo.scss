@@ -1,15 +1,23 @@
 @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
   .header-logo {
-    min-height: 4*$navbar-brand-font-size;
-    max-height: 4*$navbar-brand-font-size;
+    min-height: 3.5*$navbar-brand-font-size;
+    max-height: 3.5*$navbar-brand-font-size;
   }
 }
 
 
-@media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+@media screen and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: portrait) {
 
   .header-logo {
-    min-height: 8*$navbar-brand-font-size;
-    max-height: 8*$navbar-brand-font-size;
+    min-height: 6*$navbar-brand-font-size;
+    max-height: 6*$navbar-brand-font-size;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: landscape) {
+
+  .header-logo {
+    min-height: 5.2 * $navbar-brand-font-size;
+    max-height: 5.2 * $navbar-brand-font-size;
   }
 }

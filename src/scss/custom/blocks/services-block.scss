@@ -26,7 +26,14 @@
     }
 
     & img {
-      min-width: 100%;
+      @media screen and (orientation: landscape) {
+        min-width: 100%;
+      }
+
+      @media screen and (orientation: portrait) {
+        min-height: 100vh;
+        max-height: 100vh;
+      }
     }
   }
 }
