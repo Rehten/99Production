@@ -17,3 +17,23 @@
     display: none !important;
   }
 }
+
+@media screen and(orientation: landscape) {
+  .landscape-show {
+    display: flex !important;
+  }
+
+  .portrait-show {
+    display: none !important;
+  }
+}
+
+@media screen and(orientation: portrait) {
+  .portrait-show {
+    display: flex !important;
+  }
+
+  .landscape-show {
+    display: none !important;
+  }
+}

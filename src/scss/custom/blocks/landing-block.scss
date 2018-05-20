@@ -1,18 +1,18 @@
 .landing-block {
-
-  @media screen and(min-width: map-get($grid-breakpoints, "xl")) {
+  // Корректировка отступа снизу текста и ссылки для мобильных устройств и десктопов
+  @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
     min-height: 100vh;
     max-height: 100vh;
     padding-bottom: 1vh;
   }
 
-  @media screen and(max-width: map-get($grid-breakpoints, "xl")) {
+  @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
     min-height: 100vh;
     max-height: 100vh;
-    padding-bottom: 5vh;
+    padding-bottom: 15vh;
   }
 
-  @media screen and(max-width: map-get($grid-breakpoints, "lg")) {
+  @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: landscape) {
     min-height: 100vh;
     max-height: 100vh;
     padding-bottom: 5vh;
@@ -24,32 +24,52 @@
 $image-height: 16rem;
 .background-wrapper {
   width: 100%;
-  min-height: 100%;
-  max-height: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
   position: absolute;
   pointer-events: none;
   overflow-y: visible;
+  //вертикальная Корректировка для изображения с руками для различных планшетов и моб. устройств
+  @media screen and (orientation: portrait) and (min-width: map-get($grid-breakpoints, "lg")) {
+    padding-bottom: 20vh;
+  }
+
+  @media screen and (orientation: portrait) and (max-width: map-get($grid-breakpoints, "lg")) {
+    padding-bottom: 10vh;
+  }
+
+  @media screen and (orientation: landscape) and (min-width: map-get($grid-breakpoints, "lg")) {
+    padding-bottom: 5vh;
+  }
+
+  @media screen and (orientation: landscape) and (max-width: map-get($grid-breakpoints, "lg")) {
+    padding-bottom: 0;
+  }
 }
 
+$one-image-length: 879;
+$two-image-length: 1041;
+$both-images-height: 840;
 .background-99production.right {
   background: url("../../../assets/images/landing/99background-offhand.jpg");
   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
     min-height: $image-height * 2.2;
     max-height: $image-height * 2.2;
-    width: $image-height * 2.2 * 879/840;
+    width: $image-height * 2.2 * $one-image-length/$both-images-height;
+    background-position: bottom left;
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
     min-height: $image-height * 2.2;
     max-height: $image-height * 2.2;
-    width: $image-height * 2.2 * 879/840;
+    width: 100vw * $one-image-length/($one-image-length + $two-image-length);
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: landscape) {
     min-height: $image-height * 1.5;
     max-height: $image-height * 1.5;
-    width: $image-height * 1.5 * 879/840;
+    width: $image-height * 1.5 * $one-image-length/$both-images-height;
+    background-position: bottom left;
   }
   background-size: contain;
-  background-position: bottom left;
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -59,26 +79,27 @@ $image-height: 16rem;
   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
     min-height: $image-height * 2.2;
     max-height: $image-height * 2.2;
-    width: $image-height * 2.2 * 1041/840;
+    width: $image-height * 2.2 * $two-image-length/$both-images-height;
+    background-position: bottom right;
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
     min-height: $image-height * 2.2;
     max-height: $image-height * 2.2;
-    width: $image-height * 2.2 * 1041/840;
+    width: 100vw * $two-image-length/($one-image-length + $two-image-length);
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: landscape) {
     min-height: $image-height * 1.5;
     max-height: $image-height * 1.5;
-    width: $image-height * 1.5 * 1041/840;
+    width: $image-height * 1.5 * $two-image-length/$both-images-height;
+    background-position: bottom right;
   }
   background-size: contain;
-  background-position: bottom right;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
 .header {
-  max-height: 8rem ;
+  max-height: 8rem;
   overflow: visible;
   z-index: 1000;
 }
