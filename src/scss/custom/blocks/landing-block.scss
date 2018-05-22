@@ -15,7 +15,7 @@
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: landscape) {
     min-height: 100vh;
     max-height: 100vh;
-    padding-bottom: 5vh;
+    padding-bottom: 1vh;
   }
 
   overflow: hidden;
@@ -30,6 +30,10 @@ $image-height: 16rem;
   pointer-events: none;
   overflow-y: visible;
   //вертикальная Корректировка для изображения с руками для различных планшетов и моб. устройств
+  @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+    padding-bottom: 0 !important;
+  }
+
   @media screen and (orientation: portrait) and (min-width: map-get($grid-breakpoints, "lg")) {
     padding-bottom: 20vh;
   }
@@ -43,20 +47,21 @@ $image-height: 16rem;
   }
 
   @media screen and (orientation: landscape) and (max-width: map-get($grid-breakpoints, "lg")) {
-    padding-bottom: 0;
+    padding-top: 8vh;
   }
 }
 
-$one-image-length: 879;
-$two-image-length: 1041;
-$both-images-height: 840;
+$one-image-length: 879px;
+$two-image-length: 1041px;
+$both-images-height: 840px;
+$horizontal-mobile-size-coefficient: 1.9;
 .background-99production.right {
   background: url("../../../assets/images/landing/99background-offhand.jpg");
   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-    min-height: $image-height * 2.2;
-    max-height: $image-height * 2.2;
+    min-height: 66vh;
+    max-height: 66vh;
     width: $image-height * 2.2 * $one-image-length/$both-images-height;
-    background-position: bottom left;
+    background-position: bottom right;
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
     min-height: $image-height * 2.2;
@@ -64,9 +69,9 @@ $both-images-height: 840;
     width: 100vw * $one-image-length/($one-image-length + $two-image-length);
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: landscape) {
-    min-height: $image-height * 1.5;
-    max-height: $image-height * 1.5;
-    width: $image-height * 1.5 * $one-image-length/$both-images-height;
+    min-height: $image-height * $horizontal-mobile-size-coefficient;
+    max-height: $image-height * $horizontal-mobile-size-coefficient;
+    width: $image-height * $horizontal-mobile-size-coefficient * $one-image-length/$both-images-height;
     background-position: bottom left;
   }
   background-size: contain;
@@ -77,10 +82,10 @@ $both-images-height: 840;
 .background-99production.left {
   background: url("../../../assets/images/landing/99background-mainhand.jpg");
   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-    min-height: $image-height * 2.2;
-    max-height: $image-height * 2.2;
+    min-height: 66vh;
+    max-height: 66vh;
     width: $image-height * 2.2 * $two-image-length/$both-images-height;
-    background-position: bottom right;
+    background-position: bottom left;
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
     min-height: $image-height * 2.2;
@@ -88,9 +93,9 @@ $both-images-height: 840;
     width: 100vw * $two-image-length/($one-image-length + $two-image-length);
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: landscape) {
-    min-height: $image-height * 1.5;
-    max-height: $image-height * 1.5;
-    width: $image-height * 1.5 * $two-image-length/$both-images-height;
+    min-height: $image-height * $horizontal-mobile-size-coefficient;
+    max-height: $image-height * $horizontal-mobile-size-coefficient;
+    width: $image-height * $horizontal-mobile-size-coefficient * $two-image-length/$both-images-height;
     background-position: bottom right;
   }
   background-size: contain;

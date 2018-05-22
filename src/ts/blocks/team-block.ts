@@ -9,11 +9,13 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
-        nav: true
+        nav: true,
+        dots: false
       },
       992: {
         items: 3,
-        nav: false
+        nav: true,
+        dots: false
       }
     }
   })

@@ -1,6 +1,6 @@
 import './scss/custom/result.scss'
-import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'owl.carousel/dist/assets/owl.theme.default.css'
+// import 'owl.carousel/dist/assets/owl.carousel.css'
+// import 'owl.carousel/dist/assets/owl.theme.default.css'
 import * as $ from 'jquery'
 import './ts/components/toggle-menu'
 import './ts/components/header'

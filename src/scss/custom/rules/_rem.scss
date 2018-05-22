@@ -3,8 +3,23 @@
     font-size: 1.35rem;
   }
 }
-@media screen and (max-width: 992px) and (orientation: landscape) {
+
+@media screen
+and (min-device-width: 300px)
+and (max-device-width: 670px)
+and (orientation: landscape) {
   html {
-    font-size: 0.85rem;
+    font-size: 0.85rem !important;
+
   }
 }
+
+@media screen
+and (min-device-width: 375px)
+and (max-device-width: 992px)
+and (orientation: landscape) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+
