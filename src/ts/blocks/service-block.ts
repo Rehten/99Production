@@ -76,7 +76,7 @@ $('.service-items').each(function () {
 
     // made this code more readable
     if (!isSelected) {
-      // colored selected tab
+      // colored selected tab, and remove color from others tab
       $('.service-item, .service-item-rail').each(function () {
         $(this).removeClass('active')
       })

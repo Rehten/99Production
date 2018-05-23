@@ -104,21 +104,62 @@ $rail-size: 1.5px;
 .service-texts {
   $block-height: 60vh;
 
-  @include full-height-minus-header($block-height);
+  //@include full-height-minus-header($block-height);
   & .service-text {
     position: absolute;
-    @include full-height-minus-header($block-height);
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    align-items: center;
+    //@include full-height-minus-header($block-height);
     opacity: 0;
     transition: opacity 0.5s ease-in-out 0.25s;
 
     &.show {
+      position: inherit;
       visibility: visible;
       opacity: 1;
     }
   }
 }
 
+.service-item-header {
+  left: 0;
+  color: $light;
+  font-size: 2.5rem;
+  padding: 0.3rem 0.5rem 0.3rem 15%;
+  width: fit-content;
+  text-align: right;
+  background-color: rgba($danger, 0.7);
+  transform: translateX(-30%);
+  // common mobile
+  @media screen
+  and (orientation: portrait) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  // long mobile
+  @media screen
+  and (orientation: landscape) {
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.service-item-content {
+  & p {
+    // common mobile
+    @media screen
+    and (orientation: portrait) {
+      font-size: 2rem;
+      margin-bottom: 1.8rem;
+      line-height: 2.4rem;
+    }
+
+    // long mobile
+    @media screen
+    and (orientation: landscape) {
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+      line-height: 2rem;
+    }
+
+  }
+}
