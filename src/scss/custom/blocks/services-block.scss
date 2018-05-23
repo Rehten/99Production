@@ -94,7 +94,7 @@ $rail-size: 1.5px;
   background: $light;
   transition: background-color $animation-time ease-in-out $delay-time;
 
-  &:hover, &.active {
+  &:hover, &.active, &.hovered {
     background: $danger;
     color: $danger;
     z-index: 2;
