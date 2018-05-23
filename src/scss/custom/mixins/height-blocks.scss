@@ -1,0 +1,19 @@
+@mixin full-height-minus-header($height: 100vh) {
+  $header-height: $navbar-brand-font-size + (2 * $navbar-padding-y);
+  // переменные почему-то не могут быть поставлены в выражение calc, потому пришлось использовать такие же значения
+  // как константы
+  @media screen and (min-width: map-get($grid-breakpoints , "lg")) {
+    min-height: calc(#{$height} - (3.5 * #{$navbar-brand-font-size}) - (2 * #{$navbar-padding-y}));
+    max-height: calc(#{$height} - (3.5 * #{$navbar-brand-font-size}) - (2 * #{$navbar-padding-y}));
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: portrait) {
+    min-height: calc(#{$height} - (6 * #{$navbar-brand-font-size}) - (2 * #{$navbar-padding-y}));
+    max-height: calc(#{$height} - (6 * #{$navbar-brand-font-size}) - (2 * #{$navbar-padding-y}));
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: landscape) {
+    min-height: calc(#{$height} - (5.2 * #{$navbar-brand-font-size}) - (2 * #{$navbar-padding-y}));
+    max-height: calc(#{$height} - (5.2 * #{$navbar-brand-font-size}) - (2 * #{$navbar-padding-y}));
+  }
+}

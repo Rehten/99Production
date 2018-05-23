@@ -16,11 +16,13 @@
     $animation-time: 0.2s;
     $delay-time: $animation-time/2;
     max-height: 0;
+    min-height: 0;
     opacity: 0;
     transition: opacity $animation-time ease-in-out $delay-time,
-    max-height $animation-time ease-in-out $delay-time;
+                max-height $animation-time ease-in-out $delay-time,
+                min-height $animation-time ease-in-out $delay-time;
     &.show {
-      max-height: 100vh;
+      @include full-height-minus-header();
       opacity: 1;
     }
   }

@@ -38,8 +38,20 @@ $image-height: 16rem;
     padding-bottom: 20vh;
   }
 
-  @media screen and (orientation: portrait) and (max-width: map-get($grid-breakpoints, "lg")) {
-    padding-bottom: 10vh;
+  // common mobile
+  @media screen
+  and (min-device-width: 300px)
+  and (max-device-height: 670px)
+  and (orientation: portrait) {
+    padding-bottom: 8vh !important;
+  }
+
+  // long mobile
+  @media screen
+  and (min-device-width: 375px)
+  and (max-device-height: 812px)
+  and (orientation: portrait) {
+    padding-bottom: 16vh;
   }
 
   @media screen and (orientation: landscape) and (min-width: map-get($grid-breakpoints, "lg")) {
@@ -107,4 +119,55 @@ $horizontal-mobile-size-coefficient: 1.9;
   max-height: 8rem;
   overflow: visible;
   z-index: 1000;
+}
+
+// корректировка текста и ссылки под дизайн в зависимости от устройства и его поворота
+// common mobile
+@media screen
+and (min-device-width: 300px)
+and (max-device-height: 670px)
+and (orientation: portrait) {
+  .landing-text, .landing-small-text {
+    font-size: 3.5rem !important;
+    font-weight: inherit !important;
+  }
+}
+
+
+// long mobile
+@media screen
+and (min-device-width: 375px)
+and (max-device-height: 812px)
+and (orientation: portrait) {
+  .landing-text {
+    font-size: 5.5rem;
+    margin-bottom: 3.5rem !important;
+  }
+
+  .landing-small-text {
+    font-size: 3rem;
+  }
+}
+
+
+//common mobile horizontal
+@media screen
+and (min-device-width: 300px)
+and (max-device-width: 670px)
+and (orientation: landscape) {
+  .landing-text {
+    font-size: 3rem !important;
+
+  }
+}
+
+
+//long mobile horizontal
+@media screen
+and (min-device-width: 375px)
+and (max-device-width: 992px)
+and (orientation: landscape) {
+  .landing-text {
+    font-size: 3.5rem;
+  }
 }

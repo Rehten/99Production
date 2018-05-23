@@ -21,7 +21,7 @@
                     <span></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="StickerNavBar">
+                <div class="collapse navbar-collapse header-mobile-menu" id="StickerNavBar">
                     <ul class="navbar-nav md-show
                             d-flex flex-column justify-content-start ">
                         <li class="nav-item activetext-uppercase">
@@ -100,30 +100,42 @@
     d-flex flex-column justify-content-end">
         <!--todo: убрать дублирование кода-->
         <div class="col-12 px-0">
+            <!--<div class="col-12 mx-auto py-lg-3 px-0">-->
+            <!--<div class="landscape-show">-->
+            <!--<h1 class="col-12 px-0 text-center text-uppercase display-5 font-weight-bold mb-0">Рекламное-->
+            <!--агентство-->
+            <!--полного цикла</h1>-->
+            <!--</div>-->
+            <!--<div class="portrait-show">-->
+            <!--<h1 class="col-12 px-0 text-center text-uppercase display-4 font-weight-bold mb-0">Рекламное-->
+            <!--агентство-->
+            <!--полного цикла</h1>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-10 col-lg-6 col-xl-4 mx-auto pt-lg-3 pt-xl-1 my-3 px-0">-->
+            <!--<div class="landscape-show">-->
+            <!--<h2 class="col-12 px-0 text-uppercase text-underline text-black text-center">-->
+            <!--Скачать портфолио-->
+            <!--</h2>-->
+            <!--</div>-->
+            <!--<div class="portrait-show">-->
+            <!--<h2 class="col-10 mx-auto px-0 text-uppercase border-->
+            <!--border-black border-2 py-4 mt-5 text-black text-center">-->
+            <!--Скачать портфолио-->
+            <!--</h2>-->
+            <!--</div>-->
+            <!--</div>-->
+
             <div class="col-12 mx-auto py-lg-3 px-0">
-                <div class="landscape-show">
-                    <h1 class="col-12 px-0 text-center text-uppercase display-5 font-weight-bold mb-0">Рекламное
-                        агентство
-                        полного цикла</h1>
-                </div>
-                <div class="portrait-show">
-                    <h1 class="col-12 px-0 text-center text-uppercase display-4 font-weight-bold mb-0">Рекламное
-                        агентство
-                        полного цикла</h1>
-                </div>
+                <h1 class="col-12 landing-text px-0 text-center text-uppercase font-weight-normal mb-0">
+                    Рекламное
+                    агентство<br class="portrait-show mt-3">
+                    <span class="landing-small-text">полного цикла</span></h1>
             </div>
             <div class="col-md-10 col-lg-6 col-xl-4 mx-auto pt-lg-3 pt-xl-1 my-3 px-0">
-                <div class="landscape-show">
-                    <h2 class="col-12 px-0 text-uppercase text-underline text-black text-center">
-                        Скачать портфолио
-                    </h2>
-                </div>
-                <div class="portrait-show">
-                    <h1 class="col-12 px-0 text-uppercase text-underline text-black text-center">
-                        Скачать портфолио
-                    </h1>
-                </div>
-
+                <h2 class="col-12 landing-reference px-0 text-uppercase text-underline text-black text-center">
+                    Скачать портфолио
+                </h2>
             </div>
         </div>
     </div>
@@ -174,36 +186,42 @@
                     </button>
                 </div>
             </div>
-            <div class="col-3 position-relative lg-show">
-                <div class="col-12 pl-5 position-absolute">
+            <div class="col-3 offset-1 position-relative lg-show">
+                <div class="col-10 pl-3 position-absolute">
                     <div class="service-rails">
                         <div class="service-rail bg-light"></div>
                         <div class="service-rail bg-light"></div>
                     </div>
                 </div>
-                <div class="col-12 pl-5 position-absolute">
+                <div class="col-10 pl-3 position-absolute">
                     <div class="service-items">
                         <div class="items-wrapper col-12 px-0 py-3">
+                            <div class="service-item-rail"></div>
                             <div class="service-item" data-target="Radio">
                                 <p class="mb-0 text-center text-uppercase">Реклама на радио</p>
                             </div>
+                            <div class="service-item-rail"></div>
                             <div class="service-item" data-target="Video">
                                 <p class="mb-0 text-center text-uppercase">Видеосъемка</p>
                             </div>
+                            <div class="service-item-rail"></div>
                             <div class="service-item" data-target="Outer">
                                 <p class="mb-0 text-center text-uppercase">Наружная реклама</p>
                             </div>
+                            <div class="service-item-rail"></div>
                             <div class="service-item" data-target="Metro">
                                 <p class="mb-0 text-center text-uppercase">Реклама в метро</p>
                             </div>
+                            <div class="service-item-rail"></div>
                             <div class="service-item" data-target="Bloggers">
                                 <p class="mb-0 text-center text-uppercase">Реклама у блогеров</p>
                             </div>
+                            <div class="service-item-rail"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-0 col-md-12 md-show pb-5 flex-column">
+            <div class="col-lg-0 col-md-12 md-show pb-3 flex-column">
                 <div class="col-11 px-0 mx-auto position-relative">
                     <div class="position-absolute col-12 px-0">
                         <div id="ServicesDropDown" class="bg-black-transparent toggle-target-menu">
@@ -227,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-target="#ServicesDropDown" class="toggle-menu col-11 bg-black-transparent mx-auto px-4 py-3
+                <div data-target="#ServicesDropDown" class="toggle-menu col-11 bg-black-transparent mx-auto px-4 py-2
                     d-flex flex-row justify-content-between align-items-center">
                     <span class="text-uppercase mb-0">Услуги</span>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"

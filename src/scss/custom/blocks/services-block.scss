@@ -1,22 +1,22 @@
+$rail-size: 1.5px;
+
 .services-block {
-  min-height: 100vh;
+  @include full-height-minus-header;
 }
 
 .services-content {
-  min-height: 100vh;
+  @include full-height-minus-header;
 }
 
 .services-backgrounds {
   width: 100%;
-  min-height: 100vh;
-  max-height: 100vh;
+  @include full-height-minus-header;
   filter: brightness(25%);
   background: $dark;
   & .service-image {
     position: absolute;
     width: 100%;
-    min-height: 100vh;
-    max-height: 100vh;
+    @include full-height-minus-header;
     overflow: hidden;
     opacity: 0;
     transition: opacity 0.5s ease-in-out 0.25s;
@@ -31,8 +31,7 @@
       }
 
       @media screen and (orientation: portrait) {
-        min-height: 100vh;
-        max-height: 100vh;
+        @include full-height-minus-header;
       }
     }
   }
@@ -43,10 +42,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  min-height: 100vh;
+  @include full-height-minus-header;
 
   &>.service-rail {
-    border-left: 1px solid $light;
+    width: $rail-size;
+    background: $light;
   }
 }
 
@@ -55,25 +55,47 @@
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
-  min-height: 100vh;
+  @include full-height-minus-header;
 }
 
 .service-item {
   $animation-time: 0.1s;
   $delay-time: 0.05s;
-  padding: 5 * $kbd-padding-y;
-  border: 1.5px solid $light;
+  @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    padding: 8 * $kbd-padding-y;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+    padding: 3 * $kbd-padding-y 5 * $kbd-padding-y;
+  }
+  border-left: $rail-size solid $light;
+  border-right: $rail-size solid $light;
   color: $light;
   cursor: pointer;
   z-index: 1;
-  transition: border-bottom-color $animation-time ease-in-out $delay-time,
-  border-right-color $animation-time ease-in-out $delay-time,
+  transition: border-right-color $animation-time ease-in-out $delay-time,
   border-left-color $animation-time ease-in-out $delay-time,
-  border-top-color $animation-time ease-in-out $delay-time,
   color $animation-time ease-in-out $delay-time;
 
   &:hover, &.active {
-    border: 1.5px solid $danger;
+    border-left: $rail-size solid $danger;
+    border-right: $rail-size solid $danger;
+    color: $danger;
+    z-index: 2;
+  }
+}
+
+.service-item-rail {
+  $animation-time: 0.1s;
+  $delay-time: 0.05s;
+  width: 100%;
+  min-height: $rail-size;
+  background: $light;
+  transition: background-color $animation-time ease-in-out $delay-time;
+
+  &:hover, &.active {
+    background: $danger;
     color: $danger;
     z-index: 2;
   }
@@ -82,12 +104,10 @@
 .service-texts {
   $block-height: 60vh;
 
-  min-height: $block-height;
-  max-height: $block-height;
+  @include full-height-minus-header($block-height);
   & .service-text {
     position: absolute;
-    min-height: $block-height;
-    max-height: $block-height;
+    @include full-height-minus-header($block-height);
     display: flex;
     flex-direction: row;
     justify-content: stretch;
