@@ -1,0 +1,51 @@
+.header
+    .col-xl-12.col-lg-12.bg-light.fixed-top
+        nav.navbar.navbar-expand-lg.navbar-light.mx-xl-5.mx-lg-3.mx-md-0
+            a.navbar-brand.py-0.d-flex.align-items-center(href='#')
+                img.header-logo(src='assets/images/landing/99-LOGO.png', alt='')
+            button.navbar-toggler.header-button-hamburger(type='button', data-toggle='collapse', data-target='#StickerNavBar', aria-controls='StickerNavBar', aria-expanded='false', aria-label='Toggle navigation')
+                span
+                span
+                span
+                span
+            #StickerNavBar.collapse.navbar-collapse.header-mobile-menu
+                ul.navbar-nav.md-show.header-mobile-first.d-flex.flex-column.justify-content-start
+                    li.nav-item.activetext-uppercase
+                        a.nav-link.my-0.py-0.text-black.pr-3.small.text-right.text-uppercase(href='#') ua
+                    li.nav-item.activetext-uppercase
+                        a.nav-link.my-0.py-0.text-black.pr-3.small.text-right.text-uppercase(href='#') ru
+                    li.nav-item.activetext-uppercase
+                        a.nav-link.my-0.py-0.text-black.pr-3.small.text-right.text-uppercase(href='#') en
+                ul.navbar-nav.header-mobile-others.mobile-upper
+                    li.nav-item.active
+                        a.nav-link(href='#') Услуги
+                    li.nav-item.active
+                        a.nav-link(href='#') Команда
+                    li.nav-item.active
+                        a.nav-link(href='#') Клиенты
+                    li.nav-item.active
+                        a.nav-link(href='#') Блог
+                    li.nav-item.active
+                        a.nav-link(href='#') Контакты
+                ul.navbar-nav.header-mobile-others.ml-auto.d-flex.flex-md-row.justify-content-lg-around.justify-content-md-start
+                    li.nav-item.active.px-md-3.px-lg-0
+                        a.nav-link(href='#')
+                            img(width='30', src='./assets/svg/youtube.svg', alt='')
+                    li.nav-item.active.px-md-3.px-lg-0
+                        a.nav-link(href='#')
+                            img(width='30', src='./assets/svg/instagram.svg', alt='')
+                    li.nav-item.active.pr-lg-2.pl-lg-0.px-md-3
+                        a.nav-link(href='#')
+                            img(width='30', src='./assets/svg/facebook.svg', alt='')
+                    li.nav-item.active.border-lg-left.border-dark.pl-lg-2.pr-lg-0.lg-show
+                        a.nav-link(href='#')
+                            img(width='30', src='./assets/svg/vk.svg', alt='')
+                    li.nav-item.active.px-md-3.md-show
+                        a.nav-link(href='#')
+                            img(width='30', src='./assets/svg/vk.svg', alt='')
+                    li.nav-item.dropdown.active.lg-show
+                        a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') UA
+                        .dropdown-menu.rounded-0.border.border-light(aria-labelledby='dropdown01')
+                            a.dropdown-item(href='#') UA
+                            a.dropdown-item(href='#') EN
+                            a.dropdown-item(href='#') RU

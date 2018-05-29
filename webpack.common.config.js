@@ -45,6 +45,11 @@ module.exports = {
                 loaders: ['style-loader', 'css-loader', 'resolve-url-loader']
             },
             {
+                exclude: /node_modules/,
+                test: /\.pug/,
+                loaders: ['pug-loader']
+            },
+            {
                 test: /\.(png|jpg|gif)$/,
                 use: [
                     {
@@ -62,14 +67,14 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'Argent Project',
-            template: 'index.html',
+            template: 'index.pug',
             inlineSource: '.(js|css)$'
         }),
         new ForkTsCheckerWebpackPlugin({
             async: false,
             watch: 'src',
             tsconfig: './../tsconfig.json',
-            tslint: './../tslint.json',
+            tslint: './../tslint.json'
         }),
         new CopyWebpackPlugin([
             {from:'./assets/',to:'assets'}
@@ -84,6 +89,6 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: ['.ts', '.js', '.json']
+        extensions: ['.ts', '.js', '.json', 'pug']
     }
 };
