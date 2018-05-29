@@ -66,9 +66,21 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Argent Project',
+            title: '99Production',
             template: 'index.pug',
             inlineSource: '.(js|css)$'
+        }),
+        new HtmlWebpackPlugin({
+            title: '99Production',
+            template: 'wp-index.pug',
+            filename: 'wp-content/themes/twentyseventeen/index.php',
+            inject: 'head'
+        }),
+        new HtmlWebpackPlugin({
+            title: '99Production',
+            template: 'wp-header.pug',
+            filename: 'wp-content/themes/twentyseventeen/header.php',
+            inject: 'head'
         }),
         new ForkTsCheckerWebpackPlugin({
             async: false,
