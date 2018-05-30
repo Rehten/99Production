@@ -1,65 +1,32 @@
+-
+    var servicesList = require('./../variables-for-templates')
+
+
 .services-block.col-12.px-0
     .services-backgrounds.position-absolute
-        #RadioImage.service-image.d-flex.flex-row.justify-content-center.align-items-center
-            img(src='assets/images/service/services-1.jpg', alt='')
-        #VideoImage.service-image.d-flex.flex-row.justify-content-center.align-items-center
-            img(src='assets/images/service/services-2.jpeg', alt='')
-        #OuterImage.service-image.d-flex.flex-row.justify-content-center.align-items-center
-            img(src='assets/images/service/services-1.jpg', alt='')
-        #MetroImage.service-image.d-flex.flex-row.justify-content-center.align-items-center
-            img(src='assets/images/service/services-2.jpeg', alt='')
-        #BloggersImage.service-image.d-flex.flex-row.justify-content-center.align-items-center
-            img(src='assets/images/service/services-1.jpg', alt='')
+        each item in servicesList
+            div(id=item.identificator + 'Image').service-image.d-flex.flex-row.justify-content-center.align-items-center
+                img(src=item.imageSrc, alt='')
     .services-content.mx-0.d-flex.flex-lg-row.flex-md-column.justify-content-lg-start.justify-content-md-between.px-0
         .col-lg-8.col-md-12
             .col-lg-6.offset-lg-6.col-md-12.offset-md-0.mt-3
                 h1.text-light.text-center.text-uppercase.text-underline Услуги
             .service-texts.col-lg-8.col-md-12.mx-lg-auto.mx-md-0.mt-lg-5.mt-md-0
-                #RadioText.service-text
-                    .lg-show.col-12.flex-column.px-0
-                        h6.text-light.small.mb-3
-                            | Рекламное агенство 99 Production сделает Вашу рекламу на радио
-                            | запоминающейся, эффективной и результативной.
-                        h6.text-light.small.mb-3
-                            | Мы разработаем и реализуем оптимальную концепцию продвижения
-                            | Ваших товаров и услуг.
-                        h6.text-light.small.mb-3
-                            | У нас есть «секретное оружие» - эксклюзивное предложение,
-                            | которое отличает нас от конкурентов.
-                            | Мы создаем уникальные спец проекты и «радио-игры», которые
-                            | помогают продвигать Ваш товар или услугу не раздражая
-                            | слушателей.
-                        h6.text-light.small.mb-3
-                            | Мы поможем разработать, создать и разместить в эфире уникальную
-                            | авторскую радиопрограмму, написанную специально под Ваш
-                            | бренд!
-                        h6.text-light.small.mb-3
-                            | Наша компания уже много лет сотрудничает с самыми популярными
-                            | радиостанциями.
-                    .md-show.col-12.flex-column
-                        .service-item-header.text-uppercase
-                            span Production
-                        .service-item-content.px-3
-                            p.text-light
-                                | Производство видео/аудио продукции, создание вирусных роликов
-                            p.text-light
-                                | Наружная реклама
-                            p.text-light
-                                | Интерьерная реклама
-                            p.text-light
-                                | Рекламная и деловая полиграфия
-                            p.text-light
-                                | Корпоративные подарки
-                            .d-flex.flex-row.justify-content-end.px-5
-                                a.text-light.text-underline.h2(href='#') Скачать презентацию
-                #VideoText.service-text
-                    h6.text-light ---Some Video---
-                #OuterText.service-text
-                    h6.text-light ---Some Outer---
-                #MetroText.service-text
-                    h6.text-light ---Some Metro---
-                #BloggersText.service-text
-                    h6.text-light ---Some Bloggers---
+                each item in servicesList
+                    div(id=item.identificator + 'Text').service-text
+                        .lg-show.col-12.flex-column.px-0
+                            each row in item.rowsDesktop
+                                h6.text-light.small.mb-3
+                                    !=row
+                        .md-show.col-12.flex-column
+                            .service-item-header.text-uppercase
+                                span Production
+                            .service-item-content.px-3
+                                each row in item.rowsMobile
+                                    p.text-light
+                                        !=row
+                                .d-flex.flex-row.justify-content-end.px-5
+                                    a.text-light.text-underline.h2(href='#') Скачать презентацию
             .col-8.mx-auto.mt-4.lg-show.px-0.mt-5
                 .col-xl-4.col-lg-5
                     a.btn.btn-lg.btn-outline-light.text-uppercase.btn-block.py-3.rounded-0.small.border-2.small(href='./')
@@ -73,36 +40,20 @@
                 .service-items
                     .items-wrapper.col-12.px-0.py-3
                         .service-item-rail
-                        .service-item(data-target='Radio')
-                            p.mb-0.text-center.text-uppercase Реклама на радио
-                        .service-item-rail
-                        .service-item(data-target='Video')
-                            p.mb-0.text-center.text-uppercase Видеосъемка
-                        .service-item-rail
-                        .service-item(data-target='Outer')
-                            p.mb-0.text-center.text-uppercase Наружная реклама
-                        .service-item-rail
-                        .service-item(data-target='Metro')
-                            p.mb-0.text-center.text-uppercase Реклама в метро
-                        .service-item-rail
-                        .service-item(data-target='Bloggers')
-                            p.mb-0.text-center.text-uppercase Реклама у блогеров
-                        .service-item-rail
+                        each item in servicesList
+                            .service-item(data-target=item.identificator)
+                                p.mb-0.text-center.text-uppercase
+                                    !=item.name
+                            .service-item-rail
         .col-lg-0.col-md-12.md-show.pb-3.flex-column
             .col-11.px-0.mx-auto.position-relative
                 .position-absolute.col-12.px-0
                     #ServicesDropDown.bg-black-transparent.toggle-target-menu
                         div
-                            .service-item.mobile.border-0(data-target='Radio')
-                                p.mb-0.text-left.pl-2.text-uppercase Реклама на радио
-                            .service-item.mobile.border-0(data-target='Video')
-                                p.mb-0.text-left.pl-2.text-uppercase Видеосъемка
-                            .service-item.mobile.border-0(data-target='Outer')
-                                p.mb-0.text-left.pl-2.text-uppercase Наружная реклама
-                            .service-item.mobile.border-0(data-target='Metro')
-                                p.mb-0.text-left.pl-2.text-uppercase Реклама в метро
-                            .service-item.mobile.border-0(data-target='Bloggers')
-                                p.mb-0.text-left.pl-2.text-uppercase Реклама у блогеров
+                            each item in servicesList
+                                .service-item.mobile.border-0(data-target=item.identificator)
+                                    p.mb-0.text-left.pl-2.text-uppercase
+                                        !=item.name
             .toggle-menu.col-11.bg-black-transparent.mx-auto.px-4.py-2.d-flex.flex-row.justify-content-between.align-items-center(data-target='#ServicesDropDown')
                 span.text-uppercase.mb-0 Услуги
                 svg#Layer_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', width='1.5rem', height='1.5rem', viewbox='0 0 306 306', style='enable-background:new 0 0 407.436 407.436;', xml:space='preserve')
