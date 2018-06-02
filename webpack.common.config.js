@@ -37,7 +37,20 @@ module.exports = {
             {
                 exclude: /node_modules/,
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+                loaders: [
+                    {
+                        loader: 'style-loader',
+                        options: {
+                            attrs: { scoped: true }
+                        }
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true
+                        }
+                    },
+                    'resolve-url-loader', 'sass-loader?sourceMap']
             },
             {
                 exclude: /node_modules/,
@@ -50,37 +63,44 @@ module.exports = {
                 loaders: ['pug-loader']
             },
             {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: './dist/assets/images/'
-                        }
-                    }
-                ]
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader'
             }
         ]
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: '99Production',
-            template: 'index.pug',
-            inlineSource: '.(js|css)$'
+            template: 'wp-index.pug',
+            inlineSource: '.(js|css)$',
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             title: '99Production',
             template: 'wp-index.pug',
-            filename: 'wp-content/themes/twentyseventeen/index.php',
-            inject: 'head'
+            inlineSource: '.(js|css)$',
+            filename: 'wp-content/themes/styleblog/index.php'
+        }),
+        new HtmlWebpackPlugin({
+            title: '99Production',
+            template: 'wp-blog.pug',
+            inlineSource: '.(js|css)$',
+            filename: 'blog.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: '99Production',
+            template: 'wp-blog.pug',
+            inlineSource: '.(js|css)$',
+            filename: 'wp-content/themes/styleblog/blog.php'
         }),
         new HtmlWebpackPlugin({
             title: '99Production',
             template: 'wp-header.pug',
-            filename: 'wp-content/themes/twentyseventeen/header.php',
-            inject: 'head'
+            filename: 'wp-content/themes/styleblog/header.php'
         }),
         new ForkTsCheckerWebpackPlugin({
             async: false,

@@ -1,8 +1,11 @@
+-
+    var url = require('./../variables-for-templates').url
+
 .header
     .col-xl-12.col-lg-12.bg-light.fixed-top
-        nav.navbar.navbar-expand-lg.navbar-light.mx-xl-5.mx-lg-3.mx-md-0
+        nav.navbar.navbar-expand-lg.navbar-light.mx-xl-5.mx-lg-3.mx-md-0.mb-0
             a.navbar-brand.py-0.d-flex.align-items-center(href='#')
-                img.header-logo(src='assets/images/landing/99-LOGO.png', alt='')
+                img.header-logo(src=url + '/assets/images/landing/99-LOGO.png', alt='')
             button.navbar-toggler.header-button-hamburger(type='button', data-toggle='collapse', data-target='#StickerNavBar', aria-controls='StickerNavBar', aria-expanded='false', aria-label='Toggle navigation')
                 span
                 span
@@ -30,19 +33,19 @@
                 ul.navbar-nav.header-mobile-others.ml-auto.d-flex.flex-md-row.justify-content-lg-around.justify-content-md-start
                     li.nav-item.active.px-md-3.px-lg-0
                         a.nav-link(href='#')
-                            img(width='30', src='./assets/svg/youtube.svg', alt='')
+                            img(width='30', src=url + '/assets/svg/youtube.svg', alt='')
                     li.nav-item.active.px-md-3.px-lg-0
                         a.nav-link(href='#')
-                            img(width='30', src='./assets/svg/instagram.svg', alt='')
+                            img(width='30', src=url + '/assets/svg/instagram.svg', alt='')
                     li.nav-item.active.pr-lg-2.pl-lg-0.px-md-3
                         a.nav-link(href='#')
-                            img(width='30', src='./assets/svg/facebook.svg', alt='')
+                            img(width='30', src=url + '/assets/svg/facebook.svg', alt='')
                     li.nav-item.active.border-lg-left.border-dark.pl-lg-2.pr-lg-0.lg-show
                         a.nav-link(href='#')
-                            img(width='30', src='./assets/svg/vk.svg', alt='')
+                            img(width='30', src=url + '/assets/svg/vk.svg', alt='')
                     li.nav-item.active.px-md-3.md-show
                         a.nav-link(href='#')
-                            img(width='30', src='./assets/svg/vk.svg', alt='')
+                            img(width='30', src=url + '/assets/svg/vk.svg', alt='')
                     li.nav-item.dropdown.active.lg-show
                         a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') UA
                         .dropdown-menu.rounded-0.border.border-light(aria-labelledby='dropdown01')

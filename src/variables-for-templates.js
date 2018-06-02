@@ -1,7 +1,14 @@
 //Переменные для всех блоков - можно сказать, что это модель
+//настройка домена в зависимости от режима сборк(продакшн или дев)
+let url;
+const isProd = () => process.env.NODE_ENV === 'production'
+if(isProd()) {
+    url = 'http://99production.com.ua';
+} else {
+    url = '.';
+}
 
 //блок услуг
-
 const radioBlock = {
     name: 'Реклама на радио',
     rowsDesktop: [
@@ -18,7 +25,7 @@ const radioBlock = {
                       авторскую радиопрограмму, написанную специально под Ваш
                       бренд!`,
         `Наша компания уже много лет сотрудничает с самыми популярными
-                      радиостанциями.`
+                      радиостанциями.`,
     ],
     rowsMobile: [
         'Производство видео/аудио продукции, создание вирусных роликов',
@@ -117,4 +124,7 @@ const bloggersBlock = {
 }
 
 const servicesList = [radioBlock, videoBlock, outerBlock, metroBlock, bloggersBlock]
-module.exports = servicesList
+module.exports =  {
+    servicesList: servicesList,
+    url: url
+}

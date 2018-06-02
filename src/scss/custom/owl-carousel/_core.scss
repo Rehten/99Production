@@ -79,17 +79,31 @@
 		border: none;
 		padding:0!important;
 		line-height: 0;
-		bottom: calc(50% + 1.25rem);
+		bottom: calc(50%);
 	}
 
 	.owl-prev {
 		position: absolute;
 		left: -3rem;
+		min-height: 4rem;
+		&:hover {
+			background: transparent !important;
+		}
+		&:active, &:focus {
+			outline: 0 !important;
+		}
 	}
 
 	.owl-next {
 		position: absolute;
 		right: -3rem;
+		min-height: 4rem;
+		&:hover {
+			background: transparent !important;
+		}
+		&:active, &:focus {
+			outline: 0 !important;
+		}
 	}
 
 	&.owl-loaded {

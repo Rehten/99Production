@@ -8,15 +8,26 @@ $(document).ready(function () {
     responsiveClass: true,
     responsive: {
       0: {
-        items: 1,
-        nav: true,
-        dots: false
+        items: 3,
+        nav: false,
+        dots: false,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: false,
+        loop: true
       },
       992: {
-        items: 3,
-        nav: true,
-        dots: false
+        items: 4,
+        nav: false,
+        dots: false,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: false,
+        loop: true
       }
     }
   })
+
+  // init autoplay
+  $('.owl-carousel.companies-list').trigger('play.owl.autoplay',[3000])
 })

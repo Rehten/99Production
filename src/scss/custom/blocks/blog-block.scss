@@ -1,13 +1,17 @@
 .blog-block {
   overflow: hidden;
 }
+$loop-length: 5;
 
-@for $i from 1 through 5 {
+@for $i from 1 through $loop-length {
+  $margin-step: 0.2rem;
+  $height: $i*(5rem) + ($i - 1) * 2 * $margin-step;
+
   .blog-part-#{$i} {
-    min-height: $i*5rem;
-    max-height: $i*5rem;
+    min-height: $height;
+    max-height: $height;
     overflow: hidden;
-    padding: $i * 0.025rem;
+    margin: 0 $margin-step 2 * $margin-step $margin-step;
     display: flex;
     position: relative;
 
@@ -18,17 +22,19 @@
     .blog-arrow {
       position: absolute;
       width: 100%;
-      min-height: $i*5rem;
-      max-height: $i*5rem;
+      min-height: $height;
+      max-height: $height;
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       align-items: flex-end;
       pointer-events: none;
+      padding-right: 2rem;
+      padding-bottom: 1rem;
       & img {
-        width: 3rem;
-        min-height: 3rem;
-        max-height: 3rem;
+        width: 4rem;
+        min-height: 4rem;
+        max-height: 4rem;
         padding: 0.5rem;
       }
     }
@@ -36,14 +42,15 @@
     .block-area {
       position: absolute;
       width: 100%;
-      min-height: $i*5rem;
-      max-height: $i*5rem;
+      min-height: $height;
+      max-height: $height;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       cursor: pointer;
       transition: background-color 0.2s ease-in-out 0.1s;
+
 
       &:hover {
         background: rgba(0, 0, 0, 0.3);

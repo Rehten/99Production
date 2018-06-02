@@ -1,3 +1,6 @@
+-
+    var url = require('./../variables-for-templates').url
+
 .blog-block
     .col-12.mt-5
         h1.text-black.text-center.text-uppercase.text-underline Блог
@@ -7,20 +10,20 @@
                 .block-area
                     h3.part-text.text-light Some text
                 .blog-arrow
-                    img(src='./assets/images/blog/blog-arrow.png', alt='')
-                img(src='./assets/images/blog/blog3.jpg', alt='')
+                    img(src=url + '/assets/images/blog/blog-arrow.png', alt='')
+                img(src=url + '/assets/images/blog/blog3.jpg', alt='')
         .col-5.px-0
             .col-12.px-0
                 .blog-part-3
                     .block-area
                         h3.part-text.text-light Some text
                     .blog-arrow
-                        img(src='./assets/images/blog/blog-arrow.png', alt='')
-                    img(src='./assets/images/blog/blog2.jpg', alt='')
+                        img(src=url + '/assets/images/blog/blog-arrow.png', alt='')
+                    img(src=url + '/assets/images/blog/blog2.jpg', alt='')
             .col-12.px-0
                 .blog-part-2
                     .block-area
                         h3.part-text.text-light Some text
                     .blog-arrow
-                        img(src='./assets/images/blog/blog-arrow.png', alt='')
-                    img(src='./assets/images/blog/blog1.jpg', alt='')
+                        img(src=url + '/assets/images/blog/blog-arrow.png', alt='')
+                    img(src=url + '/assets/images/blog/blog1.jpg', alt='')

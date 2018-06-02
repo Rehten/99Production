@@ -5,6 +5,12 @@
   position: relative;
 }
 
+.nav-link.dropdown-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .dropdown-toggle {
   // Generate the caret automatically
   @include caret;

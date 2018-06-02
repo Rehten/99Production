@@ -1,16 +1,34 @@
+-
+    var url = require('./../variables-for-templates').url
+
 .contacts-block.bg-black
-    .col-12.mt-5
-        h1.text-light.text-center.text-uppercase.text-underline Контакты
-    .col-xl-11.mx-auto.col-lg-11.col-md-12.px-xl-3.px-lg-1.px-md-3.text-center
-        h3.mt-5.text-light ABC99Production@mail.ru
-        h3.mt-5.text-light
+    .col-12.mt-5.contacts-header
+        h1.text-light.pt-5.text-center.text-uppercase.text-underline Контакты
+    .col-xl-11.mx-auto.col-lg-11.col-md-12.px-xl-3.px-lg-1.px-md-3.contacts-content
+        p.text-light ABC99Production@mail.ru
+        p.text-light
             | г. Киев, м. Дорогожичи
             br
             .
                 ул. Петропавловская 54-я
             br
             a.text-uppercase.text-underline.text-light(href='#') Смотреть на карте
-        h3.mt-5.text-light +38 044 237 37 07
-        h3.text-light +38 063 237 37 07
-        .py-5
-            a.btn.btn-outline-light.rounded-0.p-3.h2.border-2.text-uppercase(href='#') Заказать звонок
+        p.text-light +38 044 237 37 07
+            br.
+            |   +38 063 237 37 07
+        div.row.pb-4
+            //Нужно отрефакторить
+            div.portrait-show.col-8.mx-auto.contacts-call
+                a.btn.btn-outline-light.btn-block.rounded-0.p-4.h2.border-2.text-uppercase(href='#') Заказать звонок
+            div.landscape-show.col-4.mx-0.contacts-call.mt-2
+                a.text-light.text-underline.h2(href='#') Заказать звонок
+            div.portrait-show.d-flex.flex-row.justify-content-between.col-8.mx-auto
+                img.contacts-image(src=url + '/assets/svg/youtube-inverted.svg')
+                img.contacts-image(src=url + '/assets/svg/instagram-inverted.svg')
+                img.contacts-image(src=url + '/assets/svg/facebook-inverted.svg')
+            div.landscape-show.d-flex.flex-row.justify-content-between.col-4.offset-4.pl-0
+                img.contacts-image(src=url + '/assets/svg/youtube-inverted.svg')
+                img.contacts-image(src=url + '/assets/svg/instagram-inverted.svg')
+                img.contacts-image(src=url + '/assets/svg/facebook-inverted.svg')
+
+

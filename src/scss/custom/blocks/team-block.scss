@@ -1,4 +1,28 @@
-img.team-member-image {
-  height: 30rem;
-  width: auto !important;
+// Корректировка отступа снизу текста и ссылки для мобильных устройств и десктопов
+@media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+  img.team-member-image {
+    height: 20rem;
+    width: auto !important;
+  }
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "xl")) {
+  img.team-member-image {
+    height: 15rem;
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
+  img.team-member-image {
+    height: 30rem;
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: landscape) {
+  img.team-member-image {
+    height: 30rem;
+    width: auto !important;
+  }
 }

@@ -5,3 +5,45 @@
 .contacts-center.contacts-map {
   width: 100%;
 }
+
+.contacts-header {
+  @media screen
+  and (max-width: map-get($grid-breakpoints, "lg"))
+  and (orientation: portrait) {
+    padding-bottom: 3rem;
+  }
+}
+
+.contacts-content {
+  &>p {
+    @media screen
+    and (max-width: map-get($grid-breakpoints, "lg"))
+    and (orientation: portrait) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    // long mobile
+    @media screen
+    and (max-width: map-get($grid-breakpoints, "lg"))
+    and (orientation: landscape) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.contacts-image {
+  $habarites: 4.5rem;
+  min-height: $habarites;
+  max-height: $habarites;
+}
+
+.contacts-call {
+  &.portrait-show {
+    margin-bottom: 1.5rem;
+    & a {
+      font-size: 1.5rem;
+    }
+  }
+}

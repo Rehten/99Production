@@ -1,15 +1,16 @@
-index.pugindex.pugdoctype html
+doctype html
 html(lang='en')
     head
         meta(charset='UTF-8')
         title 99Production
     body
-        .container-fluid.px-0
-            | <?php get_header(); ?>
+        #99ProductionMain.container-fluid.px-0
+            include pug/header
             include pug/landing-block-background
             include pug/landing-block-content
             include pug/service-block-full
             include pug/team-block
+            include pug/partner-block
             include pug/blog-block
             include pug/contacts-block
 
