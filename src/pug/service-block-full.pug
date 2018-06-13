@@ -3,21 +3,22 @@
     var servicesList = require('./../variables-for-templates').servicesList
 
 
-.services-block.col-12.px-0
+#ServiceBlock.services-block.col-12.px-0
     .services-backgrounds.position-absolute
         each item in servicesList
             div(id=item.identificator + 'Image').service-image.d-flex.flex-row.justify-content-center.align-items-center
                 img(src=item.imageSrc, alt='')
     .services-content.mx-0.d-flex.flex-lg-row.flex-md-column.justify-content-lg-start.justify-content-md-between.px-0
         .col-lg-8.col-md-12
-            .col-lg-6.offset-lg-6.col-md-12.offset-md-0.mt-3
-                h1.text-light.text-center.text-uppercase.text-underline Услуги
+            .col-lg-6.offset-lg-6.col-md-12.offset-md-0.mt-5
+                h1.text-light.text-center.text-uppercase.big
+                    u.border-light Услуги
             .service-texts.col-lg-8.col-md-12.mx-lg-auto.mx-md-0.mt-lg-5.mt-md-0
                 each item in servicesList
                     div(id=item.identificator + 'Text').service-text
                         .lg-show.col-12.flex-column.px-0
                             each row in item.rowsDesktop
-                                h6.text-light.small.mb-3
+                                h6.text-light.mb-3
                                     !=row
                         .md-show.col-12.flex-column
                             .service-item-header.text-uppercase
@@ -29,9 +30,8 @@
                                 .d-flex.flex-row.justify-content-end.px-5
                                     a.text-light.text-underline.h2(href='#') Скачать презентацию
             .col-8.mx-auto.mt-4.lg-show.px-0.mt-5
-                .col-xl-4.col-lg-5
-                    a.btn.btn-lg.btn-outline-light.text-uppercase.btn-block.py-3.rounded-0.small.border-2.small(href='./')
-                        h6.font-weight-bold.small.mb-0 Подробнее
+                .col-xl-5.col-lg-6
+                    a.btn-block.reference-info(href='./') Подробнее
         .col-3.offset-1.position-relative.lg-show
             .col-10.pl-3.position-absolute
                 .service-rails
@@ -46,7 +46,7 @@
                                 p.mb-0.text-center.text-uppercase
                                     !=item.name
                             .service-item-rail
-        .col-lg-0.col-md-12.md-show.pb-3.flex-column
+        .col-lg-0.col-md-12.md-show.pb-4.flex-column
             .col-11.px-0.mx-auto.position-relative
                 .position-absolute.col-12.px-0
                     #ServicesDropDown.bg-black-transparent.toggle-target-menu

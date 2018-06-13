@@ -19,7 +19,7 @@ $rail-size: 1.5px;
     @include full-height-minus-header;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out 0.25s;
+    transition: opacity 0.1s ease-in-out 0.05s;
 
     &.show {
       opacity: 1;
@@ -66,9 +66,6 @@ $rail-size: 1.5px;
     font-size: 0.7rem;
     font-weight: 500;
   }
-  @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
-    padding: 3 * $kbd-padding-y 5 * $kbd-padding-y;
-  }
   border-left: $rail-size solid $light;
   border-right: $rail-size solid $light;
   color: $light;
@@ -109,7 +106,7 @@ $rail-size: 1.5px;
     position: absolute;
     //@include full-height-minus-header($block-height);
     opacity: 0;
-    transition: opacity 0.5s ease-in-out 0.25s;
+    //transition: opacity 0.5s ease-in-out 0.25s;
 
     &.show {
       position: inherit;
@@ -148,17 +145,17 @@ $rail-size: 1.5px;
     // common mobile
     @media screen
     and (orientation: portrait) {
-      font-size: 2rem;
-      margin-bottom: 1.8rem;
-      line-height: 2.4rem;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      line-height: 2.6rem;
     }
 
     // long mobile
     @media screen
     and (orientation: landscape) {
-      font-size: 1.75rem;
-      margin-bottom: 0.1rem;
-      line-height: 1.85rem;
+      font-size: 2rem;
+      margin-bottom: 0.12rem;
+      line-height: 2.1rem;
     }
 
   }

@@ -7,6 +7,29 @@ if(isProd()) {
 } else {
     url = '.';
 }
+let fs = require('fs')
+let facebookIcon = {
+    normal: fs.readFileSync("./src/assets/svg/facebook.svg", {encoding: 'UTF8'}),
+    inverted: fs.readFileSync("./src/assets/svg/facebook-inverted.svg", {encoding: 'UTF8'})
+}
+let youtubeIcon = {
+    normal: fs.readFileSync("./src/assets/svg/youtube.svg", {encoding: 'UTF8'}),
+    inverted: fs.readFileSync("./src/assets/svg/youtube-inverted.svg", {encoding: 'UTF8'})
+}
+
+let instagramIcon = {
+    normal: fs.readFileSync("./src/assets/svg/instagram.svg", {encoding: 'UTF8'}),
+    inverted: fs.readFileSync("./src/assets/svg/instagram-inverted.svg", {encoding: 'UTF8'})
+}
+
+let phoneIcon = {
+    normal: fs.readFileSync("./src/assets/svg/facebook.svg", {encoding: 'UTF8'}),
+    inverted: fs.readFileSync("./src/assets/svg/facebook-inverted.svg", {encoding: 'UTF8'})
+}
+
+let logo99Production = {
+    normal: fs.readFileSync("./src/assets/images/landing/99-LOGO.png", {encoding: 'base64'}),
+}
 
 //блок услуг
 const radioBlock = {
@@ -126,5 +149,9 @@ const bloggersBlock = {
 const servicesList = [radioBlock, videoBlock, outerBlock, metroBlock, bloggersBlock]
 module.exports =  {
     servicesList: servicesList,
-    url: url
+    url: url,
+    facebookIcon: facebookIcon,
+    youtubeIcon: youtubeIcon,
+    instagramIcon: instagramIcon,
+    logo99Production: logo99Production
 }

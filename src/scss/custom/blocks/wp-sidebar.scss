@@ -1,0 +1,23 @@
+section.widget {
+  & ul {
+    & li {
+      color: $dark !important;
+      transition: color 0.2s ease-in-out 0.1s;
+      &>a, &>a:before {
+        color: $dark !important;
+        transition: color 0.2s ease-in-out 0.1s;
+        &:hover {
+          color: $dark !important;
+        }
+      }
+
+      &:hover {
+        color: lighten($danger, 5%) !important;
+
+        &>a, &>a:before {
+          color: lighten($danger, 5%) !important;
+        }
+      }
+    }
+  }
+}

@@ -64,7 +64,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg)$/,
-                loader: 'url-loader'
+                loader: 'file-loader'
             }
         ]
     },
@@ -96,6 +96,18 @@ module.exports = {
             template: 'wp-blog.pug',
             inlineSource: '.(js|css)$',
             filename: 'wp-content/themes/styleblog/blog.php'
+        }),
+        new HtmlWebpackPlugin({
+            title: '99Production',
+            template: 'wp-single.pug',
+            inlineSource: '.(js|css)$',
+            filename: 'single.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: '99Production',
+            template: 'wp-single.pug',
+            inlineSource: '.(js|css)$',
+            filename: 'wp-content/themes/styleblog/single.php'
         }),
         new HtmlWebpackPlugin({
             title: '99Production',

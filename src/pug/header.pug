@@ -1,11 +1,15 @@
 -
     var url = require('./../variables-for-templates').url
+    var youtubeIcon = require('./../variables-for-templates').youtubeIcon
+    var facebookIcon = require('./../variables-for-templates').facebookIcon
+    var instagramIcon = require('./../variables-for-templates').instagramIcon
 
 .header
     .col-xl-12.col-lg-12.bg-light.fixed-top
         nav.navbar.navbar-expand-lg.navbar-light.mx-xl-5.mx-lg-3.mx-md-0.mb-0
-            a.navbar-brand.py-0.d-flex.align-items-center(href='#')
-                img.header-logo(src=url + '/assets/images/landing/99-LOGO.png', alt='')
+            a.navbar-brand.py-0.px-0.d-flex.align-items-center(href=url)
+                div.header-logo
+                    include svg/99logo.pug
             button.navbar-toggler.header-button-hamburger(type='button', data-toggle='collapse', data-target='#StickerNavBar', aria-controls='StickerNavBar', aria-expanded='false', aria-label='Toggle navigation')
                 span
                 span
@@ -19,33 +23,34 @@
                         a.nav-link.my-0.py-0.text-black.pr-3.small.text-right.text-uppercase(href='#') ru
                     li.nav-item.activetext-uppercase
                         a.nav-link.my-0.py-0.text-black.pr-3.small.text-right.text-uppercase(href='#') en
-                ul.navbar-nav.header-mobile-others.mobile-upper
+                ul.navbar-nav.header-mobile-others.mobile-upper.desktop-center
                     li.nav-item.active
-                        a.nav-link(href='#') Услуги
+                        a.text-uppercase.text.nav-link(href='#ServiceBlock') Услуги
                     li.nav-item.active
-                        a.nav-link(href='#') Команда
+                        a.text-uppercase.text.nav-link(href='#TeamBlock') Команда
                     li.nav-item.active
-                        a.nav-link(href='#') Клиенты
+                        a.text-uppercase.text.nav-link(href='#PartnersBlock') Клиенты
                     li.nav-item.active
-                        a.nav-link(href='#') Блог
+                        a.text-uppercase.text.nav-link(href=url + '/blog/') Блог
                     li.nav-item.active
-                        a.nav-link(href='#') Контакты
-                ul.navbar-nav.header-mobile-others.ml-auto.d-flex.flex-md-row.justify-content-lg-around.justify-content-md-start
+                        a.text-uppercase.text.nav-link(href='#ContactsBlock') Контакты
+                ul.navbar-nav.header-mobile-others.ml-auto.d-flex.flex-md-row.justify-content-lg-around.justify-content-md-start.align-items-lg-center
                     li.nav-item.active.px-md-3.px-lg-0
-                        a.nav-link(href='#')
-                            img(width='30', src=url + '/assets/svg/youtube.svg', alt='')
+                        a.icon.nav-link(href='#')
+                            include svg/youtube
                     li.nav-item.active.px-md-3.px-lg-0
-                        a.nav-link(href='#')
-                            img(width='30', src=url + '/assets/svg/instagram.svg', alt='')
+                        a.icon.nav-link(href='#')
+                            include svg/instagram
                     li.nav-item.active.pr-lg-2.pl-lg-0.px-md-3
-                        a.nav-link(href='#')
-                            img(width='30', src=url + '/assets/svg/facebook.svg', alt='')
+                        a.icon.nav-link(href='#')
+                            include svg/facebook
+                    li.vertical-divider.lg-show
                     li.nav-item.active.border-lg-left.border-dark.pl-lg-2.pr-lg-0.lg-show
-                        a.nav-link(href='#')
-                            img(width='30', src=url + '/assets/svg/vk.svg', alt='')
+                        a.icon.nav-link(href='#')
+                            include svg/phone
                     li.nav-item.active.px-md-3.md-show
-                        a.nav-link(href='#')
-                            img(width='30', src=url + '/assets/svg/vk.svg', alt='')
+                        a.icon.nav-link(href='#')
+                            include svg/phone
                     li.nav-item.dropdown.active.lg-show
                         a#dropdown01.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') UA
                         .dropdown-menu.rounded-0.border.border-light(aria-labelledby='dropdown01')

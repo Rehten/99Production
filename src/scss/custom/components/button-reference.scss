@@ -1,0 +1,35 @@
+.reference-info {
+  $animation-time: 0.1s;
+  $delay-time: 0.05s;
+  padding: calc(#{8 * $kbd-padding-y} - #{$rail-size});
+  font-size: 0.7rem;
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) and (orientation: landscape) {
+    font-size: 1.4rem;
+  }
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) and (orientation: portrait) {
+    font-size: 1.5rem;
+  }
+  font-weight: 500;
+  border: $rail-size solid $light;
+  color: $light !important;
+  cursor: pointer;
+  z-index: 1;
+  text-transform: uppercase;
+  text-align: center;
+  transition: border-right-color $animation-time ease-in-out $delay-time,
+  border-left-color $animation-time ease-in-out $delay-time,
+  border-top-color $animation-time ease-in-out $delay-time,
+  border-bottom-color $animation-time ease-in-out $delay-time,
+  color $animation-time ease-in-out $delay-time;
+
+  &.inverted {
+    color: $dark !important;
+    border: $rail-size solid $dark !important;
+  }
+
+  &:hover, &.active {
+    border: $rail-size solid $danger !important;
+    color: $danger !important;
+    z-index: 2;
+  }
+}

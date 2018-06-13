@@ -2,8 +2,14 @@
 
 @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
   .header-logo {
-    min-height: 3.5*$navbar-brand-font-size;
-    max-height: 3.5*$navbar-brand-font-size;
+    svg {
+      min-height: 3.6*$navbar-brand-font-size;
+      max-height: 3.6*$navbar-brand-font-size;
+      width: auto;
+    }
+    min-height: 3.6*$navbar-brand-font-size;
+    max-height: 3.6*$navbar-brand-font-size;
+    width: auto;
   }
 }
 
@@ -11,15 +17,46 @@
 @media screen and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: portrait) {
 
   .header-logo {
-    min-height: 6*$navbar-brand-font-size;
-    max-height: 6*$navbar-brand-font-size;
+    min-height: 5.5 * $navbar-brand-font-size;
+    max-height: 5.5 * $navbar-brand-font-size;
+    width: auto;
+
+    svg {
+      min-height: 5.5 * $navbar-brand-font-size;
+      max-height: 5.5 * $navbar-brand-font-size;
+      width: auto;
+    }
   }
 }
 
 @media screen and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: landscape) {
 
   .header-logo {
-    min-height: 5.2 * $navbar-brand-font-size;
-    max-height: 5.2 * $navbar-brand-font-size;
+    min-height: 5.5 * $navbar-brand-font-size;
+    max-height: 5.5 * $navbar-brand-font-size;
+    width: auto;
+
+    svg {
+      min-height: 5.5 * $navbar-brand-font-size;
+      max-height: 5.5 * $navbar-brand-font-size;
+      width: auto;
+    }
+  }
+}
+
+.header-logo {
+  svg {
+    path {
+      fill: $black !important;
+      transition: fill 0.1s ease-in-out 0.05s;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: $danger !important;
+      }
+    }
   }
 }

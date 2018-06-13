@@ -55,7 +55,7 @@ $image-height: 16rem;
   }
 
   @media screen and (orientation: landscape) and (min-width: map-get($grid-breakpoints, "lg")) {
-    padding-bottom: 5vh;
+    padding-bottom: 25vh;
   }
 
   @media screen and (orientation: landscape) and (max-width: map-get($grid-breakpoints, "lg")) {
@@ -63,16 +63,17 @@ $image-height: 16rem;
   }
 }
 
-$one-image-length: 879px;
-$two-image-length: 1041px;
-$both-images-height: 840px;
+$one-image-length: 879 * 1rem/16;
+$two-image-length: 1041 * 1rem/16;
+$both-images-height: 840 * 1rem/16;
 $horizontal-mobile-size-coefficient: 1.9;
 .background-99production.right {
   background: url("../../../assets/images/landing/99background-offhand.jpg");
   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-    min-height: 66vh;
-    max-height: 66vh;
-    width: $image-height * 2.2 * $one-image-length/$both-images-height;
+    $height: 80vh;
+    min-height: $height;
+    max-height: $height;
+    width: $height * $one-image-length/$both-images-height;
     background-position: bottom right;
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
@@ -94,9 +95,10 @@ $horizontal-mobile-size-coefficient: 1.9;
 .background-99production.left {
   background: url("../../../assets/images/landing/99background-mainhand.jpg");
   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-    min-height: 66vh;
-    max-height: 66vh;
-    width: $image-height * 2.2 * $two-image-length/$both-images-height;
+    $height: 80vh;
+    min-height: $height;
+    max-height: $height;
+    width: $height * $two-image-length/$both-images-height;
     background-position: bottom left;
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
@@ -122,7 +124,21 @@ $horizontal-mobile-size-coefficient: 1.9;
 }
 
 // корректировка текста и ссылки под дизайн в зависимости от устройства и его поворота
-// common mobile
+@media screen and (min-width: map_get($grid-breakpoints, "xl")) {
+  .landing-text, .landing-small-text {
+    font-size: 3.5rem !important;
+    font-weight: inherit !important;
+  }
+}
+
+
+@media screen and (min-width: map_get($grid-breakpoints, "lg")) {
+  .landing-text, .landing-small-text {
+    font-size: 2.5rem !important;
+    font-weight: inherit !important;
+  }
+}
+
 @media screen
 and (min-device-width: 300px)
 and (max-device-height: 670px)

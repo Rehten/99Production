@@ -17,6 +17,7 @@ $loop-length: 5;
 
     &>img {
       width: 100%;
+      //min-height: max-content;
     }
 
     .blog-arrow {
@@ -56,7 +57,7 @@ $loop-length: 5;
         background: rgba(0, 0, 0, 0.3);
       }
       .part-text {
-        text-align: center;
+        text-align: left;
       }
     }
   }

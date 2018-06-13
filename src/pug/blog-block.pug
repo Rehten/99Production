@@ -2,13 +2,15 @@
     var url = require('./../variables-for-templates').url
 
 .blog-block
-    .col-12.mt-5
-        h1.text-black.text-center.text-uppercase.text-underline Блог
-    .col-12.row.mx-0
+    .col-12.my-5
+        h1.text-black.text-center.text-uppercase.big
+            u.border-black Блог
+    .col-xl-10.mx-auto.col-lg-10.col-md-12.row
         .col-7.px-0
             .blog-part-5
                 .block-area
-                    h3.part-text.text-light Some text
+                    h1.col-10.mx-auto.part-text.text-light.text-uppercase Каждый день мы узнаем что-то новое.&nbsp;
+                        | Хотите получить этот багаж знаний?
                 .blog-arrow
                     img(src=url + '/assets/images/blog/blog-arrow.png', alt='')
                 img(src=url + '/assets/images/blog/blog3.jpg', alt='')
@@ -16,14 +18,14 @@
             .col-12.px-0
                 .blog-part-3
                     .block-area
-                        h3.part-text.text-light Some text
+                        h1.col-10.mx-auto.part-text.text-light.text-uppercase Как писать продающие статьи?
                     .blog-arrow
                         img(src=url + '/assets/images/blog/blog-arrow.png', alt='')
                     img(src=url + '/assets/images/blog/blog2.jpg', alt='')
             .col-12.px-0
                 .blog-part-2
                     .block-area
-                        h3.part-text.text-light Some text
+                        h3.col-10.mx-auto.part-text.text-light.text-uppercase Читать все статьи...
                     .blog-arrow
                         img(src=url + '/assets/images/blog/blog-arrow.png', alt='')
                     img(src=url + '/assets/images/blog/blog1.jpg', alt='')

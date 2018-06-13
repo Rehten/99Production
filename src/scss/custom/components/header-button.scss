@@ -1,13 +1,23 @@
-$height-step: 0.2rem;
+$height-step: 0.28rem;
 $span-const: 1.66;
 
 .header-button-hamburger {
   outline: 0 !important;
   border: none;
-  width: 15*$height-step;
+  @media screen and (orientation: landscape) {
+    width: 15*$height-step;
+  }
+  @media screen and (orientation: portrait) {
+    width: 15*$height-step * 0.85;
+  }
   padding: 0;
   // высота кнопки - подобрана методом пробы
-  min-height: 10*$height-step;
+  @media screen and (orientation: landscape) {
+    min-height: 10*$height-step;
+  }
+  @media screen and (orientation: portrait) {
+    min-height: 10*$height-step * 0.85;
+  }
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -22,7 +32,12 @@ $span-const: 1.66;
   & span {
     display: block;
     position: absolute;
-    height: $span-const * $height-step;
+    @media screen and (orientation: landscape) {
+      height: $span-const * $height-step;
+    }
+    @media screen and (orientation: portrait) {
+      height: $span-const * $height-step * 0.85;
+    }
     width: 100%;
     background: $navbar-light-active-color;
     opacity: 1;
@@ -42,16 +57,31 @@ $span-const: 1.66;
 
 
     &:nth-child(2), &:nth-child(3) {
-      top: $span-const * 2.5 *  $height-step;
+      @media screen and (orientation: landscape) {
+        top: $span-const * 2.5 *  $height-step;
+      }
+      @media screen and (orientation: portrait) {
+        top: $span-const * 2.5 *  $height-step * 0.85;
+      }
     }
 
     &:nth-child(4) {
-      top: $span-const * 5 * $height-step;
+      @media screen and (orientation: landscape) {
+        top: $span-const * 5 * $height-step;
+      }
+      @media screen and (orientation: portrait) {
+        top: $span-const * 5 * $height-step * 0.85;
+      }
     }
   }
 
   &.show span:nth-child(1) {
-    top: $span-const * 2.5 * $height-step;
+    @media screen and (orientation: landscape) {
+      top: $span-const * 2.5 * $height-step;
+    }
+    @media screen and (orientation: portrait) {
+      top: $span-const * 2.5 * $height-step * 0.85;
+    }
     width: 0;
     left: 50%;
   }
@@ -71,7 +101,12 @@ $span-const: 1.66;
   }
 
   &.show span:nth-child(4) {
-    top: $span-const * 2.5 * $height-step;
+    @media screen and (orientation: landscape) {
+      top: $span-const * 2.5 * $height-step;
+    }
+    @media screen and (orientation: portrait) {
+      top: $span-const * 2.5 * $height-step * 0.85;
+    }
     width: 0;
     left: 50%;
   }

@@ -6,6 +6,7 @@ import * as $ from 'jquery'
   * */
 $(document).ready(function () {
   let isDropdownShow: boolean = false
+
   $('.toggle-menu').on('click', function () {
     const selector: string = $(this).attr('data-target')
     const menu = $(selector)
@@ -18,5 +19,18 @@ $(document).ready(function () {
       menu.addClass('show')
       $(this).addClass('active')
     }
+  })
+
+  $('.service-item.mobile').click(function () {
+    // hide toggle-menu
+    const toggleMenu = $('.toggle-menu')
+    const selector: string = toggleMenu.attr('data-target')
+    const menu = $(selector)
+    menu.removeClass('show')
+    toggleMenu.removeClass('active')
+
+    // hide toggle menu
+    isDropdownShow = false;
+    menu.removeClass('show')
   })
 })

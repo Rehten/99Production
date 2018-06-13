@@ -2,7 +2,7 @@
 
 @each $color, $value in $theme-colors {
   @include bg-variant(".bg-#{$color}", $value);
-  @include bg-variant(".bg-#{$color}-transparent", $value, 0.5);
+  @include bg-variant(".bg-#{$color}-transparent", $value, 0.85);
 }
 
 @if $enable-gradients {

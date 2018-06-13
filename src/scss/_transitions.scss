@@ -10,6 +10,7 @@
 }
 
 .collapse {
+  padding-left: 0!important;
   @media screen and(max-width: map-get($grid-breakpoints, "lg")) {
     display: block;
     overflow: hidden;
