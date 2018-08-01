@@ -1,9 +1,15 @@
+-
+    var url = require('./variables-for-templates').url;
+
+| <?php  /* Template Name: Landing */ ?>
 doctype html
 html(lang='en')
     head
-        meta(charset='UTF-8')
-        title 99Production
-    body
+    meta(charset='UTF-8')
+    title 99Production
+    link(rel="icon", href=url + "/assets/favicon.ico", type="image/x-icon")
+    link(rel="shortcut icon", href=url + "/assets/favicon.ico", type="image/x-icon")
+    body.bg-black
         #99ProductionMain.container-fluid.px-0
             include pug/header
             include pug/landing-block-background

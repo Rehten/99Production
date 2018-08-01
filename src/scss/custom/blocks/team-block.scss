@@ -15,8 +15,11 @@
 
 @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
   img.team-member-image {
-    height: 30rem;
+    height: 40rem;
     width: auto !important;
+  }
+  .service-reference-justify {
+    justify-content: flex-start;
   }
 }
 
@@ -25,4 +28,8 @@
     height: 30rem;
     width: auto !important;
   }
+  .service-reference-justify {
+    justify-content: flex-end;
+  }
 }
+

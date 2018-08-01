@@ -25,4 +25,22 @@ $(document).ready(function () {
       dropdownMenu.addClass('show')
     }
   })
+
+  // hide mobile menu on every link click
+  $('.nav-link').on('click', function () {
+    $('#StickerNavBar').removeClass('show')
+  })
+
+  //    toggle header on scroll
+  let stickHeader = $('#StickHeader')
+
+  $(window).scroll(function (ev) {
+    let userScrollingPosition = $(this).scrollTop()
+    let firstBlockHeight = $('#ServiceBlock').height()
+    if (userScrollingPosition > firstBlockHeight) {
+      stickHeader.addClass('showed')
+    } else {
+      stickHeader.removeClass('showed')
+    }
+  })
 })

@@ -155,7 +155,7 @@
                     if( $sidebar_position == 'none' || !is_active_sidebar( 'sidebar-1' ) ) :
                         $class = 'col-md-12';
                     else :
-                        $class = 'col-lg-8 col-md-8 col-sm-12 col-xs-12 sticky_portion';
+                        $class = 'col-lg-8 col-md-12 col-sm-12 col-xs-12 sticky_portion';
                     endif;
                     if( $sidebar_position == 'left' ) :
                         get_sidebar();
@@ -205,29 +205,15 @@
         </div>
     </div>`
 
+| <?php  /* Template Name: Blog */ ?>
 doctype html
 html(lang='en')
     head
         meta(charset='UTF-8')
-        | <meta name="viewport" content="width=device-width, initial-scale=1">
         title 99Production
+        link(rel="icon", href=url + "/assets/favicon.ico", type="image/x-icon")
+        link(rel="shortcut icon", href=url + "/assets/favicon.ico", type="image/x-icon")
         | <?php wp_head(); ?>
-        //todo: отрефачить на вордпрессовские скрипты
-        //link(
-        // rel='stylesheet', id='dashicons-css'  href=url + '/wp-includes/css/dashicons.min.css?ver=4.9.6', type='text/css', media='all'
-        //)
-        //link(
-        // rel='stylesheet', id='admin-bar-css'  href=url + '/wp-includes/css/admin-bar.min.css?ver=4.9.6', type='text/css', media='all'
-        //)
-        //link(
-        // rel='stylesheet', id='styleblog-style-css'  href=url + '/wp-content/themes/styleblog/style.css?ver=4.9.6', type='text/css', media='all'
-        //)
-        //link(
-        // rel='stylesheet', id='styleblog-fonts-css'  href='https://fonts.googleapis.com/css?family=Spectral+SC%3A300%2C400%2C400i%2C500%2C600%2C700%7CLato%3A300%2C400%2C400i%2C500%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.9.6', type='text/css', media='all'
-        //)
-        //link(
-        // rel='stylesheet', id='styleblog-main-css'  href=url + '/wp-content/themes/styleblog/themebeez/assets/dist/css/main.min.css?ver=4.9.6', type='text/css', media='all'
-        //)
     | <body <?php body_class(); ?>>
     #99ProductionMain.container-fluid.px-0.pb-5
         include pug/header

@@ -26,11 +26,13 @@ $(document).ready(function () {
     const toggleMenu = $('.toggle-menu')
     const selector: string = toggleMenu.attr('data-target')
     const menu = $(selector)
+    const mobileItemName = $(this).find('p').html()
     menu.removeClass('show')
     toggleMenu.removeClass('active')
 
     // hide toggle menu
-    isDropdownShow = false;
+    isDropdownShow = false
     menu.removeClass('show')
+    toggleMenu.find('span').html(mobileItemName)
   })
 })

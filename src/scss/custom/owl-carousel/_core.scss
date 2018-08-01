@@ -83,8 +83,19 @@
 	}
 
 	.owl-prev {
+		&>svg {
+			path {
+				fill: #ffffff;
+			}
+		}
 		position: absolute;
 		left: -8rem;
+		@media screen and (max-width: map_get($grid-breakpoints, "lg")) {
+			left: -6.5rem;
+		}
+		@media screen and (max-width: map_get($grid-breakpoints, "xl")) {
+			left: -5.8rem;
+		}
 		min-height: 4rem;
 		&:hover {
 			background: transparent !important;
@@ -95,8 +106,19 @@
 	}
 
 	.owl-next {
+		&>svg {
+			path {
+				fill: #ffffff;
+			}
+		}
 		position: absolute;
 		right: -8rem;
+		@media screen and (max-width: map_get($grid-breakpoints, "lg")) {
+			right: -6.5rem;
+		}
+		@media screen and (max-width: map_get($grid-breakpoints, "xl")) {
+			right: -5.8rem;
+		}
 		min-height: 4rem;
 		&:hover {
 			background: transparent !important;

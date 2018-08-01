@@ -2,14 +2,15 @@
 
 @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
   .header-logo {
+    min-height: 0.9 * 3.6*$navbar-brand-font-size;
+    max-height: 0.9 * 3.6*$navbar-brand-font-size;
+    width: auto;
     svg {
-      min-height: 3.6*$navbar-brand-font-size;
-      max-height: 3.6*$navbar-brand-font-size;
+      min-height: 0.9 * 3.6*$navbar-brand-font-size;
+      max-height: 0.9 * 3.6*$navbar-brand-font-size;
+      padding: 0.05 * 3.6*$navbar-brand-font-size 0;
       width: auto;
     }
-    min-height: 3.6*$navbar-brand-font-size;
-    max-height: 3.6*$navbar-brand-font-size;
-    width: auto;
   }
 }
 
@@ -17,13 +18,14 @@
 @media screen and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: portrait) {
 
   .header-logo {
-    min-height: 5.5 * $navbar-brand-font-size;
-    max-height: 5.5 * $navbar-brand-font-size;
+    min-height: 0.9 * 5.5 * $navbar-brand-font-size;
+    max-height: 0.9 * 5.5 * $navbar-brand-font-size;
     width: auto;
 
     svg {
-      min-height: 5.5 * $navbar-brand-font-size;
-      max-height: 5.5 * $navbar-brand-font-size;
+      min-height: 0.9 * 5.5 * $navbar-brand-font-size;
+      max-height: 0.9 * 5.5 * $navbar-brand-font-size;
+      padding: 0.05 * 3.6*$navbar-brand-font-size 0;
       width: auto;
     }
   }
@@ -32,13 +34,14 @@
 @media screen and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: landscape) {
 
   .header-logo {
-    min-height: 5.5 * $navbar-brand-font-size;
-    max-height: 5.5 * $navbar-brand-font-size;
+    min-height: 0.9 * 5.5 * $navbar-brand-font-size;
+    max-height: 0.9 * 5.5 * $navbar-brand-font-size;
     width: auto;
 
     svg {
-      min-height: 5.5 * $navbar-brand-font-size;
-      max-height: 5.5 * $navbar-brand-font-size;
+      min-height: 0.9 * 5.5 * $navbar-brand-font-size;
+      max-height: 0.9 * 5.5 * $navbar-brand-font-size;
+      padding: 0.05 * 5.5 * $navbar-brand-font-size 0;
       width: auto;
     }
   }

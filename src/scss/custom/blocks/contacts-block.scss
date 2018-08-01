@@ -2,8 +2,33 @@
   background: rgba(38, 38, 41, 0.95);
 }
 
+.contacts-block {
+  overflow-x: hidden;
+  @media screen and (min-width: map_get($grid-breakpoints, 'lg')) {
+    min-height: 100vh;
+  }
+}
+
+.md-contacts-show {
+  @media screen and (min-width: map_get($grid-breakpoints, 'lg')) {
+    display: none !important;
+  }
+}
+
 .contacts-center.contacts-map {
   width: 100%;
+}
+.contacts-font {
+  font-size: 1.45rem;
+  font-weight: 500;
+
+}
+
+.contacts-full-height {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contacts-header {

@@ -10,5 +10,8 @@ import './ts/blocks/companies-block'
 
 $(document).ready(() => {
   // replace to service block
-  $('.service-item')[0].click()
+  const firstServiceTab = $('.service-item')[0]
+  if (firstServiceTab) {
+    firstServiceTab.click()
+  }
 });

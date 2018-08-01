@@ -22,6 +22,7 @@
   justify-content: space-between; // space out brand from logo
   padding: $navbar-padding-y $navbar-padding-x !important;
   border: 0 !important;
+  z-index: 9999;
   &:before {
     display: none !important;
   }
@@ -46,7 +47,7 @@
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-padding-x;
   font-size: $navbar-brand-font-size;
-  line-height: inherit;
+  line-height: inherit !important;
   white-space: nowrap;
 
   @include hover-focus {
@@ -106,7 +107,7 @@
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x !important;
   font-size: $navbar-toggler-font-size;
-  line-height: 1;
+  line-height: 1 !important;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
   @include border-radius($navbar-toggler-border-radius);
@@ -319,4 +320,8 @@
       }
     }
   }
+}
+
+.navbar-nav>li>a {
+  line-height: inherit !important;
 }

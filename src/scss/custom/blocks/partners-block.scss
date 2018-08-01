@@ -1,9 +1,3 @@
 .company-image {
   width: 100%;
 }
-
-.partners-block {
-  @media screen and (orientation: landscape) and (max-width: map-get($grid-breakpoints, "lg")) {
-    padding: 0 7.5%;
-  }
-}

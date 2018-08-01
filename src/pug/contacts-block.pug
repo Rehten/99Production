@@ -2,34 +2,64 @@
     var url = require('./../variables-for-templates').url
 
 #ContactsBlock.contacts-block.bg-black
-    .col-12.mt-5.contacts-header
-        h1.text-light.pt-5.text-center.text-uppercase.big
-            u.border-light Контакты
-    .col-xl-11.mx-auto.col-lg-11.col-md-12.px-xl-3.px-lg-1.px-md-3.contacts-content
-        p.text-light ABC99Production@mail.ru
-        p.text-light
-            | г. Киев, м. Дорогожичи
-            br
-            .
-                ул. Петропавловская 54-я
-            br
-            a.text-uppercase.text-underline.text-light(href='#') Смотреть на карте
-        p.text-light +38 044 237 37 07
-            br.
-            |   +38 063 237 37 07
-        div.row.pb-4
-            //Нужно отрефакторить
-            div.portrait-show.col-8.mx-auto.contacts-call
-                a.btn.btn-outline-light.btn-block.rounded-0.p-4.h2.border-2.text-uppercase(href='#') Заказать звонок
-            div.landscape-show.col-4.mx-0.contacts-call.mt-2
-                a.text-light.text-underline.h2(href='#') Заказать звонок
-            div.portrait-show.d-flex.flex-row.justify-content-between.col-8.mx-auto
-                img.contacts-image(src=url + '/assets/svg/youtube-inverted.svg')
-                img.contacts-image(src=url + '/assets/svg/instagram-inverted.svg')
-                img.contacts-image(src=url + '/assets/svg/facebook-inverted.svg')
-            div.landscape-show.d-flex.flex-row.justify-content-between.col-4.offset-4.pl-0
-                img.contacts-image(src=url + '/assets/svg/youtube-inverted.svg')
-                img.contacts-image(src=url + '/assets/svg/instagram-inverted.svg')
-                img.contacts-image(src=url + '/assets/svg/facebook-inverted.svg')
+    div.md-contacts-show
+        .col-12.mt-5.contacts-header
+            h1.text-light.pt-5.text-center.text-uppercase.big
+                u.border-light Контакты
+        .col-xl-11.mx-auto.col-lg-11.col-md-12.px-xl-3.px-lg-1.px-md-3.contacts-content
+            p.text-light ABC99Production@mail.ru
+            p.text-light
+                | г. Киев, м. Дорогожичи
+                br
+                .
+                    ул. Петропавловская 54-я
+                br
+                a.text-uppercase.text-underline.text-light(href='#') Смотреть на карте
+            p.text-light +38 044 237 37 07
+                br.
+                |   +38 063 237 37 07
+            div.row.pb-4
+                //Нужно отрефакторить
+                div.portrait-show.col-8.mx-auto.contacts-call
+                    a.btn.btn-outline-light.btn-block.rounded-0.p-4.h2.border-2.text-uppercase(href='#') Заказать звонок
+                div.landscape-show.col-4.mx-0.contacts-call.mt-2
+                    a.text-light.text-underline.h2(href='#') Заказать звонок
+                div.portrait-show.d-flex.flex-row.justify-content-between.col-8.mx-auto
+                    img.contacts-image(src=url + '/assets/svg/youtube-inverted.svg')
+                    img.contacts-image(src=url + '/assets/svg/instagram-inverted.svg')
+                    img.contacts-image(src=url + '/assets/svg/facebook-inverted.svg')
+                div.landscape-show.d-flex.flex-row.justify-content-between.col-4.offset-4.pl-0
+                    img.contacts-image(src=url + '/assets/svg/youtube-inverted.svg')
+                    img.contacts-image(src=url + '/assets/svg/instagram-inverted.svg')
+                    img.contacts-image(src=url + '/assets/svg/facebook-inverted.svg')
+    .lg-show.row.contacts-full-height
+        .col-12.mt-2.contacts-header.px-0
+            h1.text-light.pt-5.text-center.text-uppercase.display-4.font-weight-bold Нужна консультация?
+        .col-10.mx-auto.my-5.px-0
+            h1.text-light.text-center Мы бесплатно проконсультируем Вас по всем вопросам
+                br.
+                | касаемо продвижения бизнеса.
+                br.
+                | Отправьте заявку и мы свяжемся с Вами.
+            div.col-xl-5.col-lg-7.mx-auto.contacts-call.mt-5.pt-4
+                a.btn.btn-outline-light.btn-block.rounded-0.p-4.border-2.text-uppercase.contacts-font.px-4(href='#') Заказать консультацию
+        div.col-11.mx-auto.row.mt-5.mb-2.px-2
+            .col-4
+                h4.text-light.text-left
+                    | Украина, Киев
+                    br.
+                    | ул. Петропавловская 54-а
+            .col-4
+                h4.text-light.text-center
+                    | info@99production.com.ua
+                h6.text-center.text-light.mt-1 Made with ❤ by 99Production
+            .col-4
+                h3.text-light.text-right +38 044 237 37 07
+                    br.
+                    |   +38 063 237 37 07
+
+
+
+
 
 

@@ -54,8 +54,8 @@ $image-height: 16rem;
     padding-bottom: 16vh;
   }
 
-  @media screen and (orientation: landscape) and (min-width: map-get($grid-breakpoints, "lg")) {
-    padding-bottom: 25vh;
+  @media screen and (orientation: landscape) and (max-width: map-get($grid-breakpoints, "xl")) {
+    padding-bottom: 12vh;
   }
 
   @media screen and (orientation: landscape) and (max-width: map-get($grid-breakpoints, "lg")) {
@@ -71,10 +71,15 @@ $horizontal-mobile-size-coefficient: 1.9;
   background: url("../../../assets/images/landing/99background-offhand.jpg");
   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
     $height: 80vh;
-    min-height: $height;
-    max-height: $height;
+    min-height: calc(#{$height} - #{$navbar-brand-font-size * 2});
+    max-height: calc(#{$height} - #{$navbar-brand-font-size * 2});
     width: $height * $one-image-length/$both-images-height;
     background-position: bottom right;
+  }
+  @media screen and (max-width: map-get($grid-breakpoints, "xl")) {
+    $height: 70vh;
+    min-height: calc(#{$height} - #{$navbar-brand-font-size * 2});
+    max-height: calc(#{$height} - #{$navbar-brand-font-size * 2});
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
     min-height: $image-height * 2.2;
@@ -96,10 +101,15 @@ $horizontal-mobile-size-coefficient: 1.9;
   background: url("../../../assets/images/landing/99background-mainhand.jpg");
   @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
     $height: 80vh;
-    min-height: $height;
-    max-height: $height;
+    min-height: calc(#{$height} - #{$navbar-brand-font-size * 2});
+    max-height: calc(#{$height} - #{$navbar-brand-font-size * 2});
     width: $height * $two-image-length/$both-images-height;
     background-position: bottom left;
+  }
+  @media screen and (max-width: map-get($grid-breakpoints, "xl")) {
+    $height: 70vh;
+    min-height: calc(#{$height} - #{$navbar-brand-font-size * 2});
+    max-height: calc(#{$height} - #{$navbar-brand-font-size * 2});
   }
   @media screen and (max-width: map-get($grid-breakpoints, "lg")) and(orientation: portrait) {
     min-height: $image-height * 2.2;
@@ -131,11 +141,15 @@ $horizontal-mobile-size-coefficient: 1.9;
   }
 }
 
-
-@media screen and (min-width: map_get($grid-breakpoints, "lg")) {
+@media screen and (max-width: map_get($grid-breakpoints, "xl")) and (orientation: portrait){
   .landing-text, .landing-small-text {
-    font-size: 2.5rem !important;
-    font-weight: inherit !important;
+    font-size: 3.5rem !important;
+  }
+}
+
+@media screen and (max-width: map_get($grid-breakpoints, "xl")) and (orientation: landscape){
+  .landing-text, .landing-small-text {
+    font-size: 3rem !important;
   }
 }
 
@@ -185,5 +199,68 @@ and (max-device-width: 992px)
 and (orientation: landscape) {
   .landing-text {
     font-size: 3.5rem;
+  }
+}
+
+.landing-bg {
+  background-image: url("../../../assets/images/landing/landing-bg.png");
+  @media screen and (min-width: map_get($grid-breakpoints, "xl")) {
+    background-size: 330vh;
+    background-position-x: calc(-25vw);
+    background-position-y: calc(60vh - 6rem);
+  }
+  @media screen and (max-width: map_get($grid-breakpoints, "xl")) {
+    background-position-x: -43vw;
+    background-position-y: calc(80vh - 13rem);
+  }
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) {
+    background-position-x: -40vw;
+    background-position-y: 30rem;
+    background-size: 350vh;
+    min-height: 200vh!important;
+  }
+  min-height: 200vh;
+  width: 100%;
+}
+
+.increase-font {
+  font-size: 0.85rem !important;
+}
+
+$landing-margin-tablet: 2rem;
+
+@mixin workaround_move_down() {
+  transform: translateY(5rem);
+}
+
+.landing-content-font {
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) {
+    margin-left: $landing-margin-tablet !important;
+    padding-top: 12rem !important;
+    @include workaround_move_down();
+  }
+}
+
+.landing-content-font, .landing-content-font > span {
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) {
+    font-size: 3.6rem !important;
+    color: $white !important;
+    line-height: 4.5rem;
+  }
+}
+
+.landing-content-button {
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) {
+    flex: 66% !important;
+    width: 66% !important;
+    margin-left: $landing-margin-tablet !important;
+    margin-top: 8rem !important;
+    @include workaround_move_down();
+
+    &>a.reference-info.inverted {
+      color: $white !important;
+      font-size: 1.6rem !important;
+      border: 1.5px solid $white !important;
+    }
   }
 }

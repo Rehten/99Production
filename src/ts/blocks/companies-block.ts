@@ -17,7 +17,7 @@ $(document).ready(function () {
         loop: true
       },
       992: {
-        items: 4,
+        items: 5,
         nav: false,
         dots: false,
         autoplay: false,

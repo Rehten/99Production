@@ -4,16 +4,16 @@
 
 
 #ServiceBlock.services-block.col-12.px-0
-    .services-backgrounds.position-absolute
-        each item in servicesList
-            div(id=item.identificator + 'Image').service-image.d-flex.flex-row.justify-content-center.align-items-center
-                img(src=item.imageSrc, alt='')
+    .services-backgrounds.position-absolute.bg-transparent
+        // each item in servicesList
+        //     div(id=item.identificator + 'Image').service-image.d-flex.flex-row.justify-content-center.align-items-center
+        //         img(src=item.imageSrc, alt='')
     .services-content.mx-0.d-flex.flex-lg-row.flex-md-column.justify-content-lg-start.justify-content-md-between.px-0
         .col-lg-8.col-md-12
             .col-lg-6.offset-lg-6.col-md-12.offset-md-0.mt-5
                 h1.text-light.text-center.text-uppercase.big
                     u.border-light Услуги
-            .service-texts.col-lg-8.col-md-12.mx-lg-auto.mx-md-0.mt-lg-5.mt-md-0
+            .service-texts.col-xl-10.col-lg-12.col-md-12.mx-lg-auto.mx-md-0.mt-lg-5.mt-md-0
                 each item in servicesList
                     div(id=item.identificator + 'Text').service-text
                         .lg-show.col-12.flex-column.px-0
@@ -23,20 +23,20 @@
                         .md-show.col-12.flex-column
                             .service-item-header.text-uppercase
                                 span Production
-                            .service-item-content.px-3
+                            .service-item-content.px-1
                                 each row in item.rowsMobile
                                     p.text-light
                                         !=row
-                                .d-flex.flex-row.justify-content-end.px-5
+                                .d-flex.flex-row.service-reference-justify.pr-5
                                     a.text-light.text-underline.h2(href='#') Скачать презентацию
-            .col-8.mx-auto.mt-4.lg-show.px-0.mt-5
-                .col-xl-5.col-lg-6
+            .col-xl-10.col-lg-12.mx-auto.mt-4.lg-show.px-0.mt-5
+                .col-lg-5
                     a.btn-block.reference-info(href='./') Подробнее
-        .col-3.offset-1.position-relative.lg-show
+        .col-xl-3.offset-xl-1.col-lg-4.offset-lg-0.position-relative.lg-show
             .col-10.pl-3.position-absolute
-                .service-rails
-                    .service-rail.bg-light
-                    .service-rail.bg-light
+                //.service-rails
+                //    .service-rail.bg-light
+                //    .service-rail.bg-light
             .col-10.pl-3.position-absolute
                 .service-items
                     .items-wrapper.col-12.px-0.py-3

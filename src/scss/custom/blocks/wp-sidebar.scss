@@ -1,23 +1,51 @@
-section.widget {
-  & ul {
-    & li {
-      color: $dark !important;
-      transition: color 0.2s ease-in-out 0.1s;
-      &>a, &>a:before {
-        color: $dark !important;
-        transition: color 0.2s ease-in-out 0.1s;
-        &:hover {
-          color: $dark !important;
-        }
-      }
-
-      &:hover {
-        color: lighten($danger, 5%) !important;
-
-        &>a, &>a:before {
-          color: lighten($danger, 5%) !important;
-        }
-      }
-    }
-  }
-}
+//section.widget {
+//  & ul {
+//    & li {
+//      color: $black !important;
+//      transition: color 0.2s ease-in-out 0.1s;
+//      &>a, &>a:before {
+//        color: $black !important;
+//        transition: color 0.2s ease-in-out 0.1s;
+//        &:hover {
+//          color: $black !important;
+//        }
+//      }
+//
+//      &:hover {
+//        color: $danger !important;
+//
+//        &>a, &>a:before {
+//          color: $danger !important;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//// жесточайший костыль из-за проблем с вордпрессом
+//aside#secondary.col-lg-4.col-md-4 {
+//  flex: 0 0 33.33333%;
+//  max-width: 33.33333%;
+//  @media screen and (max-width: map_get($grid-breakpoints, "lg")){
+//    flex: 0 0 100% !important;
+//    max-width: 100% !important;
+//  }
+//}
+//
+//
+//input.search-submit,  input.submit {
+//  background: $black !important;
+//  transition: background 0.2s ease-in-out 0.1s, color 0.2s ease-in-out 0.1s !important;
+//
+//  &:hover {
+//    background: $danger !important;
+//  }
+//}
+//
+//.main-navigation {
+//  z-index: 1 !important;
+//}
+//
+//section.widget_categories, section.widget_meta, i.fa.fa-search {
+//  display: none !important;
+//}

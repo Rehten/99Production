@@ -124,12 +124,12 @@ $rail-size: 1.5px;
   width: fit-content;
   text-align: right;
   background-color: rgba($danger, 0.7);
-  transform: translateX(-30%);
+  transform: translateX(-26%);
   // common mobile
   @media screen
   and (orientation: portrait) {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 5.5rem;
   }
 
   // long mobile

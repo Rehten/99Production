@@ -1,13 +1,14 @@
-.header-mobile-menu {
+.navbar-collapse.collapse.header-mobile-menu {
   @media screen and (max-width: 992px) and (orientation: portrait) {
     & {
-      display: flex;
+      display: flex !important;
       flex-direction: column;
       justify-content: space-between;
       align-items: stretch;
     }
 
     & .header-mobile-others {
+      align-items: flex-start;
       margin: 0 auto 0 0 !important;
       padding: 5 * $navbar-padding-y 0;
       &.mobile-upper {
@@ -31,7 +32,7 @@
   and (max-device-width: 992px)
   and (orientation: landscape) {
     & {
-      display: flex;
+      display: flex !important;
       flex-direction: column;
       justify-content: space-between;
       align-items: stretch;
@@ -43,6 +44,7 @@
     }
 
     & .header-mobile-others {
+      align-items: flex-start;
       margin: 0 auto 0 0 !important;
       &>.nav-item>.nav-link {
         margin-top: 0 !important;
@@ -68,10 +70,10 @@
   }
 
   @media screen
-  and (min-width: map-get($grid-breakpoints, "lg"))
+  and (min-width: map-get($grid-breakpoints, "xl"))
   and (orientation: landscape) {
     & .header-mobile-others.desktop-center {
-      display: flex;
+      display: flex !important;
       flex-direction: row;
       justify-content: space-around;
       width: 60%;
@@ -91,16 +93,23 @@
   }
 }
 
+@mixin increase-svg-header-size($koefficient: 1, $size: 2.1rem) {
+  width: $koefficient * $size;
+  min-height: $koefficient * $size;
+  max-height: $koefficient * $size;
+}
 
 .nav-link.icon {
   $size: 2.1rem;
-  width: $size;
-  min-height: $size;
-  max-height: $size;
+  @include increase-svg-header-size(1, $size);
+  @media screen and (max-width: map_get($grid-breakpoints, "lg")) {
+    @include increase-svg-header-size(2.5, $size);
+  }
   svg {
-    width: $size;
-    min-height: $size;
-    max-height: $size;
+    @include increase-svg-header-size(1, $size);
+    @media screen and (max-width: map_get($grid-breakpoints, "lg")) {
+      @include increase-svg-header-size(2.5, $size);
+    }
     path {
       fill: $black !important;
       transition: fill 0.1s ease-in-out 0.05s;
@@ -122,5 +131,21 @@
   max-height: 1.5rem;
   min-width: 0.1rem;
   background: $black;
+}
+
+
+.float-header.showed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+
+.float-header {
+  z-index: 9999 !important;
+  transform: translateY(-10vh) !important;
+  opacity: 0 !important;
+  transition: transform 0.25s ease-in-out 0.1s, opacity 0.25s ease-in-out 0.1s !important;
+  pointer-events: none !important;
 }
 

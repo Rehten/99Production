@@ -39,10 +39,7 @@ module.exports = {
                 test: /\.scss$/,
                 loaders: [
                     {
-                        loader: 'style-loader',
-                        options: {
-                            attrs: { scoped: true }
-                        }
+                        loader: 'style-loader'
                     },
                     {
                         loader: 'css-loader',
@@ -83,7 +80,8 @@ module.exports = {
             title: '99Production',
             template: 'wp-index.pug',
             inlineSource: '.(js|css)$',
-            filename: 'wp-content/themes/styleblog/index.php'
+            // жесть, потому что вордпресс требует блог на главной странице(иначе не видны записи)
+            filename: 'wp-content/themes/styleblog/landing.php'
         }),
         new HtmlWebpackPlugin({
             title: '99Production',
@@ -95,7 +93,8 @@ module.exports = {
             title: '99Production',
             template: 'wp-blog.pug',
             inlineSource: '.(js|css)$',
-            filename: 'wp-content/themes/styleblog/blog.php'
+            // жесть, потому что вордпресс требует блог на главной странице(иначе не видны записи)
+            filename: 'wp-content/themes/styleblog/index.php'
         }),
         new HtmlWebpackPlugin({
             title: '99Production',

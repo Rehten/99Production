@@ -39,7 +39,7 @@
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
   @include box-shadow($dropdown-box-shadow);
-  transition: opacity 0.15s ease-in-out 0.075s, max-height 0.15s ease-in-out 0.075s;
+  transition: opacity 0.15s ease-in-out 0.075s, max-height 0.15s ease-in-out 0.075s !important;
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
@@ -97,14 +97,15 @@
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   clear: both;
   font-weight: $font-weight-normal;
-  color: $dropdown-link-color;
+  color: $dropdown-link-color !important;
   text-align: inherit; // For `<button>`s
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
+  transition: none !important;
 
   @include hover-focus {
-    color: $dropdown-link-hover-color;
+    color: $dropdown-link-hover-color !important;
     text-decoration: none;
     @include gradient-bg($dropdown-link-hover-bg);
   }

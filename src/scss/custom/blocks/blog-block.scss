@@ -3,6 +3,12 @@
 }
 $loop-length: 5;
 
+.blog-blocks {
+  @media screen and (max-width: map_get($grid-breakpoints, 'lg')) and (orientation: landscape) {
+    flex: 50%;
+  }
+}
+
 @for $i from 1 through $loop-length {
   $margin-step: 0.2rem;
   $height: $i*(5rem) + ($i - 1) * 2 * $margin-step;
