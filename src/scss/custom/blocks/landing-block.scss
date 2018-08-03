@@ -207,22 +207,22 @@ and (orientation: landscape) {
   @media screen and (min-width: map_get($grid-breakpoints, "xl")) {
     background-size: 330vh;
     background-position-x: calc(-25vw);
-    background-position-y: calc(60vh - 6rem);
+    //background-position-y: calc(60vh - 6rem);
   }
   @media screen and (max-width: map_get($grid-breakpoints, "xl")) {
     background-position-x: -43vw;
-    background-position-y: calc(80vh - 13rem);
+    //background-position-y: calc(80vh - 13rem);
   }
   @media screen and (max-width: map_get($grid-breakpoints, "lg")) and (orientation: portrait) {
     background-position-x: -40vw;
-    background-position-y: 30rem;
+    //background-position-y: 30rem;
     background-size: 350vh;
     min-height: 200vh!important;
   }
 
   @media screen and (max-width: map_get($grid-breakpoints, "lg")) and (orientation: landscape) {
     background-position-x: -33.5vw;
-    background-position-y: 23.5rem;
+    //background-position-y: 23.5rem;
     background-size: 350vh;
     min-height: 200vh!important;
   }
@@ -231,15 +231,16 @@ and (orientation: landscape) {
   @media screen and (min-device-width: 375px) and (max-device-width: 413px)  and (min-device-height: 736px) and (max-device-height: 812px) {
     background-size: 320vh;
     background-position-x: -90vw;
-    background-position-y: 55rem;
+    //background-position-y: 55rem;
   }
 
   // common mobile
   @media screen and (min-device-width: 200px) and (max-device-width: 375px) {
-    background-size: 320vh;
+    background-size: 260vh;
     background-position-x: -65vw;
-    background-position-y: 42rem;
+    //background-position-y: 42rem;
   }
+  background-repeat: no-repeat;
   min-height: 200vh;
   width: 100%;
 }
