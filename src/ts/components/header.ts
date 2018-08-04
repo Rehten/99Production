@@ -7,9 +7,11 @@ $(document).ready(function () {
     if (isHeaderOpen) {
       $(targetSelector).removeClass('show')
       $(this).removeClass('show')
+      $('#LandingText').show()
     } else {
       $(targetSelector).addClass('show')
       $(this).addClass('show')
+      $('#LandingText').hide()
     }
   })
 

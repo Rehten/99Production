@@ -10,9 +10,9 @@
     & .header-mobile-others {
       align-items: flex-start;
       margin: 0 auto 0 0 !important;
-      padding: 5 * $navbar-padding-y 0;
+      padding: 5 * $navbar-padding-y 0 6rem 0;
       &.mobile-upper {
-        padding-bottom: 40vh;
+        padding-top: 10vh;
       }
 
       &>.nav-item>.nav-link {
@@ -22,6 +22,7 @@
 
     & .header-mobile-first {
       padding-top: $navbar-padding-y;
+      transform: translateY(-20px);
       &>.nav-item>.nav-link {
         font-size: 2rem;
       }
